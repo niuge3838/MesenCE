@@ -984,6 +984,129 @@ Windows：
 			<Control ID="btnSelect">选择…</Control>
 			<Control ID="btnDelete">删除文件</Control>
 		</Form>
+			<Form ID="SelectStorageFolderWindow">
+			<Control ID="wndTitle">选择数据存储文件夹</Control>
+			<Control ID="lblStorageHint">选择存储 Mesen 数据的位置：</Control>
+			<Control ID="radStorageDocuments">将数据存储在我的用户配置文件中</Control>
+			<Control ID="radStoragePortable">将数据存储在应用程序所在文件夹中</Control>
+			<Control ID="lblFolder">目标文件夹：</Control>
+			<Control ID="lblCopyingFiles">正在复制文件...</Control>
+			<Control ID="btnOK">确定</Control>
+			<Control ID="btnCancel">取消</Control>
+		</Form>
+			<Form ID="NetplayStartServerWindow">
+			<Control ID="wndTitle">启动服务器...</Control>
+			<Control ID="lblPort">端口：</Control>
+			<Control ID="lblPassword">密码：</Control>
+			<Control ID="btnOK">确定</Control>
+			<Control ID="btnCancel">取消</Control>
+		</Form>
+			<Form ID="NetplayConnectWindow">
+			<Control ID="wndTitle">连接到服务器...</Control>
+			<Control ID="lblHost">主机：</Control>
+			<Control ID="lblPort">端口：</Control>
+			<Control ID="lblPassword">密码：</Control>
+			<Control ID="btnOK">确定</Control>
+			<Control ID="btnCancel">取消</Control>
+		</Form>
+			<Form ID="VideoRecordWindow">
+			<Control ID="wndTitle">视频录制设置</Control>
+			<Control ID="lblAviFile">保存到：</Control>
+			<Control ID="lblCodec">视频编码器：</Control>
+			<Control ID="lblCompressionLevel">压缩级别：</Control>
+			<Control ID="lblLowCompression">低
+（快速）</Control>
+			<Control ID="lblHighCompression">高
+（慢速）</Control>
+			<Control ID="lblRecordSystemHud">录制系统 HUD（游戏计时器、屏幕消息等）</Control>
+			<Control ID="lblRecordInputHud">录制输入 HUD</Control>
+			<Control ID="btnBrowse">浏览...</Control>
+			<Control ID="btnOK">开始录制</Control>
+			<Control ID="btnCancel">取消</Control>
+		</Form>
+			<Form ID="UpdatePromptWindow">
+			<Control ID="wndTitle">MesenCE 更新程序</Control>
+			<Control ID="lblLatestVersion">最新版本：</Control>
+			<Control ID="lblInstalledVersion">已安装版本：</Control>
+			<Control ID="lblNewVersionAvailable">有可用的 Mesen 新版本</Control>
+			<Control ID="lblReleaseNotes">发行说明</Control>
+			<Control ID="btnUpdate">更新</Control>
+			<Control ID="btnCancel">取消</Control>
+		</Form>
+			<Form ID="MovieRecordWindow">
+			<Control ID="wndTitle">影片录制设置</Control>
+			<Control ID="lblSaveTo">保存到：</Control>
+			<Control ID="lblRecordFrom">录制来源：</Control>
+			<Control ID="lblMovieInformation">影片信息（可选）</Control>
+			<Control ID="lblAuthor">作者：</Control>
+			<Control ID="lblDescription">描述：</Control>
+			<Control ID="btnBrowse">浏览...</Control>
+			<Control ID="btnOK">开始录制</Control>
+			<Control ID="btnCancel">取消</Control>
+		</Form>
+			<Form ID="HdPackBuilderWindow">
+			<Control ID="wndTitle">高清素材包构建器</Control>
+			<Control ID="grpOptions">录制设置</Control>
+			<Control ID="lblBankSize">CHR Bank 大小：</Control>
+			<Control ID="lblScale">缩放 / 滤镜：</Control>
+			<Control ID="chkSortByUsageFrequency">按使用频率对页面排序</Control>
+			<Control ID="chkUseLargeSprites">使用 8×16 精灵显示模式</Control>
+			<Control ID="chkGroupBlankTiles">将空白图块分组</Control>
+			<Control ID="chkIgnoreOverscan">忽略屏幕边缘（过扫描）处的图块</Control>
+			<Control ID="btnStartRecording">开始录制</Control>
+			<Control ID="btnStopRecording">停止录制</Control>
+			<Control ID="btnOpenFolder">打开保存文件夹</Control>
+			<Control ID="lblSaveTo">保存到：</Control>
+		</Form>
+			<Form ID="InputBarcodeWindow">
+			<Control ID="wndTitle">输入条形码...</Control>
+			<Control ID="lblBarcode">条形码：</Control>
+			<Control ID="btnOk">确定</Control>
+			<Control ID="btnCancel">取消</Control>
+		</Form>
+			<Form ID="GameConfigWindow">
+			<Control ID="wndTitle">游戏设置</Control>
+			<Control ID="tabOverscan">过扫描</Control>
+			<Control ID="chkOverrideOverscan">使用针对该游戏的过扫描设置</Control>
+			<Control ID="tabDipSwitches">DIP 开关</Control>
+			<Control ID="btnOk">确定</Control>
+			<Control ID="btnCancel">取消</Control>
+		</Form>
+			<Form ID="SaveSpcFileWindow">
+			<Control ID="wndTitle">保存 .SPC 文件</Control>
+			<Control ID="grpTags">ID666 标签</Control>
+			<Control ID="lblSongTitle">曲目名称</Control>
+			<Control ID="lblGameTitle">游戏名称</Control>
+			<Control ID="lblSongArtist">艺术家</Control>
+			<Control ID="btnOK">保存文件</Control>
+			<Control ID="btnCancel">取消</Control>
+		</Form>
+			<Form ID="AudioPlayerView">
+			<Control ID="btnPrevTrack">上一曲</Control>
+			<Control ID="btnNextTrack">下一曲</Control>
+			<Control ID="btnPlayPause">播放 / 暂停</Control>
+			<Control ID="btnToggleShuffle">开启 / 关闭随机播放</Control>
+			<Control ID="btnToggleRepeat">开启 / 关闭循环播放</Control>
+		</Form>
+			<Form ID="LabelListView">
+			<Control ID="colLabel">标签</Control>
+			<Control ID="colCpuAddr">CPU 地址</Control>
+			<Control ID="colRomAddr">ROM 地址</Control>
+			<Control ID="colComment">注释</Control>
+		</Form>
+			<Form ID="OtherConsolesConfigView">
+			<Control ID="lblTitle">其他主机设置</Control>
+		</Form>
+			<Form ID="ShortcutKeysTabView">
+			<Control ID="lblShortcut">快捷键</Control>
+			<Control ID="lblKey">按键</Control>
+			<Control ID="lblAction">操作</Control>
+			<Control ID="lblDescription">说明</Control>
+		</Form>
+			<Form ID="DebuggerShortcutKeyGrid">
+			<Control ID="colAction">快捷操作</Control>
+			<Control ID="colBinding1">按键</Control>
+		</Form>
 	</Forms>
 	<Messages>
 		<Message ID="LastSession">上次会话</Message>
