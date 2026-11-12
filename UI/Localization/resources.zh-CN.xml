@@ -653,9 +653,30 @@ Windows：
 		<Form ID="CheatListWindow">
 			<Control ID="btnDeleteCheat">删除</Control>
 			<Control ID="mnuDeleteCheat">删除</Control>
+		
+			<Control ID="wndTitle">作弊码</Control>
+			<Control ID="tabCheats">作弊码</Control>
+			<Control ID="btnAddCheat">添加作弊码</Control>
+			<Control ID="mnuAddCheat">添加作弊码...</Control>
+			<Control ID="colDescription">描述</Control>
+			<Control ID="colCodes">代码</Control>
+			<Control ID="chkDisableCheats">禁用所有作弊码</Control>
+			<Control ID="btnOK">确定</Control>
+			<Control ID="btnCancel">取消</Control>
 		</Form>
 		<Form ID="CheatEditWindow">
 			<Control ID="lblFormat">格式：</Control>
+		
+			<Control ID="wndTitle">编辑作弊码</Control>
+			<Control ID="lblDescription">描述：</Control>
+			<Control ID="grpCodes">代码</Control>
+			<Control ID="radGameGenie">Game Genie（例如：A1B2-C3D4）</Control>
+			<Control ID="radProActionReplay">Pro Action Replay（例如：AAAAAAVV）</Control>
+			<Control ID="chkEnabled">启用作弊码</Control>
+			<Control ID="lblHint">输入多个代码时，每行输入一个代码。</Control>
+			<Control ID="lblInvalidCodes">部分代码与所选格式不匹配。</Control>
+			<Control ID="btnOK">确定</Control>
+			<Control ID="btnCancel">取消</Control>
 		</Form>
 		<Form ID="CommandLineHelpWindow">
 			<Control ID="btnOk">关闭</Control>
@@ -707,11 +728,35 @@ Windows：
 			<Control ID="wndTitle">图块地图查看器</Control>
 			<Control ID="mnuFile">文件(_F)</Control>
 			<Control ID="mnuView">视图(_V)</Control>
+		
+			<Control ID="btnToggleSettings">切换设置面板</Control>
+			<Control ID="lblBackground">背景：</Control>
+			<Control ID="lblDisplayMode">显示模式：</Control>
+			<Control ID="lblSelectedTile">已选图块</Control>
+			<Control ID="lblTilemap">图块地图</Control>
+			<Control ID="chkShowGrid">显示图块网格</Control>
+			<Control ID="chkNesShowAttributeGrid">显示属性网格（16×16）</Control>
+			<Control ID="chkNesShowAttributeByteGrid">显示属性网格（32×32）</Control>
+			<Control ID="chkNesShowTilemapGrid">显示名称表分界线</Control>
+			<Control ID="lblHighlightOptions">高亮设置</Control>
+			<Control ID="lblTileHighlightMode">图块：</Control>
+			<Control ID="lblAttributeHighlightMode">属性：</Control>
+			<Control ID="chkShowScrollOverlay">显示滚动覆盖层</Control>
 		</Form>
 		<Form ID="TileEditorWindow">
 			<Control ID="mnuFile">文件(_F)</Control>
 			<Control ID="mnuView">视图(_V)</Control>
 			<Control ID="mnuTools">工具(_T)</Control>
+		
+			<Control ID="wndTitle">图块编辑器</Control>
+			<Control ID="lblBackground">背景：</Control>
+			<Control ID="chkShowGrid">显示网格</Control>
+			<Control ID="lblPreview">预览</Control>
+			<Control ID="lblHint1">点击上方选择颜色。</Control>
+			<Control ID="lblHint2">左键单击：绘制所选颜色</Control>
+			<Control ID="lblHint3">按住 Shift：查看光标下像素的详细信息</Control>
+			<Control ID="lblHint4">Shift + 单击 / 右键单击：拾取光标下的颜色</Control>
+			<Control ID="lblHint5">Ctrl + 单击：将像素设为透明</Control>
 		</Form>
 		<Form ID="TileViewerWindow">
 			<Control ID="wndTitle">图块查看器</Control>
@@ -719,6 +764,17 @@ Windows：
 			<Control ID="mnuView">视图(_V)</Control>
 			<Control ID="lblAddress">地址：</Control>
 			<Control ID="lblFormat">格式：</Control>
+		
+			<Control ID="btnToggleSettings">切换设置面板</Control>
+			<Control ID="lblSelectedTile">已选图块</Control>
+			<Control ID="lblPresets">预设：</Control>
+			<Control ID="lblSource">来源：</Control>
+			<Control ID="lblSize">大小：</Control>
+			<Control ID="lblTileLayout">图块布局：</Control>
+			<Control ID="lblFilter">滤镜：</Control>
+			<Control ID="lblBackground">背景：</Control>
+			<Control ID="chkShowTileGrid">显示图块网格</Control>
+			<Control ID="chkUseGrayscalePalette">使用灰度调色板</Control>
 		</Form>
 		<Form ID="PaletteViewerWindow">
 			<Control ID="wndTitle">调色板查看器</Control>
@@ -739,6 +795,22 @@ Windows：
 			<Control ID="colFlags">标志</Control>
 			<Control ID="colVisible">可见</Control>
 			<Control ID="chkShowListView">显示列表视图</Control>
+		
+			<Control ID="lblSelectedSprite">已选精灵</Control>
+			<Control ID="btnToggleSettings">切换设置面板</Control>
+			<Control ID="colSpriteIndex">#</Control>
+			<Control ID="colX">X</Control>
+			<Control ID="colY">Y</Control>
+			<Control ID="colSize">大小</Control>
+			<Control ID="colTileIndex">图块</Control>
+			<Control ID="chkShowOutline">显示精灵轮廓</Control>
+			<Control ID="chkShowOffscreenRegions">显示屏幕外区域</Control>
+			<Control ID="chkDimOffscreenSprites">淡化屏幕外精灵（网格）</Control>
+			<Control ID="lblBackground">背景：</Control>
+			<Control ID="lblFilter">滤镜：</Control>
+			<Control ID="lblDataSource">数据来源</Control>
+			<Control ID="lblSource">来源：</Control>
+			<Control ID="lblSourceOffset">偏移：</Control>
 		</Form>
 		<Form ID="AssemblerWindow">
 			<Control ID="wndTitle">汇编器</Control>
@@ -783,6 +855,19 @@ Windows：
 			<Control ID="lblFrameTiming">帧时序：</Control>
 			<Control ID="lblSystem">系统：</Control>
 			<Control ID="lblInputType">输入类型：</Control>
+		
+			<Control ID="lblVsSystemType">VS System 类型：</Control>
+			<Control ID="lblVsPpuType">VS PPU 类型：</Control>
+			<Control ID="lblPrgRom">PRG ROM：</Control>
+			<Control ID="lblChrRom">CHR ROM：</Control>
+			<Control ID="lblWorkRam">工作 RAM：</Control>
+			<Control ID="lblSaveRam">存档 RAM：</Control>
+			<Control ID="lblChrRam">CHR RAM：</Control>
+			<Control ID="lblChrSaveRam">CHR 存档 RAM：</Control>
+			<Control ID="chkBattery">电池供电</Control>
+			<Control ID="chkTrainer">训练器</Control>
+			<Control ID="btnSaveAs">另存为...</Control>
+			<Control ID="btnCancel">取消</Control>
 		</Form>
 		<Form ID="TraceLoggerWindow">
 			<Control ID="wndTitle">跟踪记录器</Control>
@@ -844,6 +929,56 @@ Windows：
 		<Form ID="DebuggerOptionsView">
 			<Control ID="chkShowByteCode">显示机器码</Control>
 			<Control ID="lblBreakOptions">中断条件…</Control>
+		
+			<Control ID="lblDisassemblyOptions">反汇编设置</Control>
+			<Control ID="lblVerifiedData">数据：</Control>
+			<Control ID="lblUnidentifiedBlock">未识别：</Control>
+			<Control ID="lblAddressDisplay">边距：</Control>
+			<Control ID="chkShowMemoryValues">显示内存数值</Control>
+			<Control ID="chkUseLowerCaseDisassembly">使用小写字母</Control>
+			<Control ID="chkShowJumpLabels">显示跳转/子程序标签</Control>
+			<Control ID="chkSnesUseAltSpcOpNames">使用类似 6502 的助记符</Control>
+			<Control ID="lblDisassemblyMode">CPU 模式：</Control>
+			<Control ID="lblDisassemblyModeHint">控制将未识别代码按 ARM 还是 Thumb 指令进行反汇编。</Control>
+			<Control ID="chkBreakOnInvalidPpuAccess">无效的 PPU 内存访问</Control>
+			<Control ID="chkBreakOnReadDuringAutoJoy">自动读取期间读取控制器</Control>
+			<Control ID="chkSpcBreakOnStpSleep">STOP / SLEEP</Control>
+			<Control ID="chkBreakOnUninitRead">读取未初始化内存</Control>
+			<Control ID="chkBreakOnOpen">打开调试器时</Control>
+			<Control ID="chkBreakOnPowerCycleReset">重新上电 / 重置</Control>
+			<Control ID="chkBreakOnUnofficialOpCode">非官方操作码</Control>
+			<Control ID="chkBreakOnUnstableOpCode">不稳定操作码</Control>
+			<Control ID="chkBreakOnUnstableOpCodeHint">在“ANE #imm”（$8B）和“LAX #imm”（$AB）时中断。这两条操作码在硬件上的行为不稳定，结果通常不可靠。</Control>
+			<Control ID="chkBreakOnCpuCrash">CPU 崩溃</Control>
+			<Control ID="chkBreakOnBusConflict">总线冲突</Control>
+			<Control ID="chkBreakOnDecayedOamRead">读取衰减的 OAM</Control>
+			<Control ID="chkBreakOnPpuScrollGlitch">PPU 滚动异常</Control>
+			<Control ID="chkNesInvalidVramAccess">无效的 VRAM 访问</Control>
+			<Control ID="chkNesInvalidOamWrite">无效的 OAM 写入</Control>
+			<Control ID="chkNesDmaInputRead">DMA 控制器读取</Control>
+			<Control ID="chkNesBreakOnExtOutputMode">PPU EXT 输出模式</Control>
+			<Control ID="chkGbBreakOnInvalidOamAccess">无效的 OAM 访问</Control>
+			<Control ID="chkGbBreakOnInvalidVramAccess">无效的 VRAM 访问</Control>
+			<Control ID="chkGbBreakOnDisableLcdOutsideVblank">在垂直消隐期之外关闭 LCD</Control>
+			<Control ID="chkGbBreakOnInvalidOpCode">无效指令</Control>
+			<Control ID="chkGbBreakOnNopLoad">LD B, B（NOP）</Control>
+			<Control ID="chkGbBreakOnOamCorruption">OAM 损坏</Control>
+			<Control ID="chkPceBreakOnInvalidVramAddress">无效的 VRAM 地址</Control>
+			<Control ID="chkGbaBreakOnInvalidOpCode">遇到无效指令时中断</Control>
+			<Control ID="chkGbaBreakOnNopLoad">遇到 MOV R11, R11（NOP）时中断</Control>
+			<Control ID="chkBreakOnUnalignedMemAccess">未对齐的内存访问时中断</Control>
+			<Control ID="chkBreakOnUndefinedOpCode">未定义操作码</Control>
+			<Control ID="lblMiscSettings">其他设置</Control>
+			<Control ID="chkBringToFrontOnBreak">中断时置于前台</Control>
+			<Control ID="chkBringToFrontOnPause">暂停时置于前台</Control>
+			<Control ID="chkFocusGameOnResume">恢复时聚焦游戏窗口</Control>
+			<Control ID="chkRefreshWhileRunning">运行时刷新</Control>
+			<Control ID="chkDrawPartialFrame">绘制部分帧</Control>
+			<Control ID="chkUsePredictiveBreakpoints">使用预测断点</Control>
+			<Control ID="chkUsePredictiveBreakpointsHint">启用后，调试器会尝试在相应的读写操作发生前预测断点，从而在指令开始执行前暂停。</Control>
+			<Control ID="chkSingleBreakpointPerInstruction">每条指令仅中断一次</Control>
+			<Control ID="chkSnesIgnoreDspReadWrites">忽略 DSP 读写</Control>
+			<Control ID="chkSnesIgnoreDspReadWritesHint">调试器将忽略 DSP 对 SPC RAM 的读写。DSP 执行的读写不会触发断点，也不会计入访问次数等统计。（这可以略微提高调试性能。）</Control>
 		</Form>
 		<Form ID="MemoryToolsWindow">
 			<Control ID="wndTitle">内存查看器</Control>
@@ -858,6 +993,21 @@ Windows：
 			<Control ID="chkHighlightExec">执行</Control>
 			<Control ID="chkHighlightCode">代码</Control>
 			<Control ID="chkHighlightData">数据</Control>
+		
+			<Control ID="lblAccessHighlight">访问高亮</Control>
+			<Control ID="lblFadeSpeed">渐隐速度：</Control>
+			<Control ID="lblDataTypeHighlight">数据类型高亮</Control>
+			<Control ID="lblFontSettings">字体设置</Control>
+			<Control ID="lblMiscSettings">其他设置</Control>
+			<Control ID="lblUnidentified">未识别</Control>
+			<Control ID="chkHighlightLabel">标签</Control>
+			<Control ID="chkHighlightFrozenAddresses">冻结的地址</Control>
+			<Control ID="chkHighlightNesPcmData">DPCM 数据</Control>
+			<Control ID="chkHighlightNesDrawnChrRom">已绘制图块（PPU）</Control>
+			<Control ID="chkHighlightBreakpoints">断点</Control>
+			<Control ID="chkHighDensityTextMode">使用高密度文本</Control>
+			<Control ID="chkShowCharacters">显示字符</Control>
+			<Control ID="chkShowTooltips">显示工具提示</Control>
 		</Form>
 		<Form ID="MemoryViewerFindWindow">
 			<Control ID="wndTitle">查找…</Control>
@@ -893,6 +1043,66 @@ Windows：
 			<Control ID="lblGeneralSettings">常规设置</Control>
 			<Control ID="tabScriptWindow">脚本窗口</Control>
 			<Control ID="tabMemoryTools">内存查看器</Control>
+		
+			<Control ID="lblScriptStartupBehavior">打开脚本窗口时：</Control>
+			<Control ID="chkSaveScriptBeforeRun">运行脚本前自动保存更改</Control>
+			<Control ID="chkAutoStartScriptOnLoad">加载（或重新加载）脚本时自动启动</Control>
+			<Control ID="chkAutoReloadScriptWhenFileChanges">文件更改时自动从磁盘重新加载脚本</Control>
+			<Control ID="chkAutoRestartScriptAfterPowerCycle">重新上电或重新加载游戏后自动重启脚本</Control>
+			<Control ID="lblDisplaySettings">显示设置</Control>
+			<Control ID="chkShowLineNumbers">显示行号</Control>
+			<Control ID="lblRestrictions">限制</Control>
+			<Control ID="lblMaxExecutionTime">最大执行时间：</Control>
+			<Control ID="lblSeconds">秒</Control>
+			<Control ID="chkAllowIoOsAccess">允许访问 I/O 和操作系统功能</Control>
+			<Control ID="chkAllowNetworkAccess">允许网络访问</Control>
+			<Control ID="tabFonts">字体和颜色</Control>
+			<Control ID="lblFontSettings">字体设置</Control>
+			<Control ID="lblDisassemblyFont">反汇编：</Control>
+			<Control ID="lblMemoryViewerFont">内存查看器：</Control>
+			<Control ID="lblAssemblerFont">汇编器：</Control>
+			<Control ID="lblScriptWindowFont">脚本窗口：</Control>
+			<Control ID="lblOtherMonoFont">其他（等宽字体）：</Control>
+			<Control ID="lblSyntaxHighlighting">语法高亮</Control>
+			<Control ID="lblCodeOpcodeColor">操作码</Control>
+			<Control ID="lblCodeLabelDefinitionColor">标签</Control>
+			<Control ID="lblCodeImmediateColor">立即数</Control>
+			<Control ID="lblCodeAddressColor">地址值</Control>
+			<Control ID="lblCodeCommentColor">注释</Control>
+			<Control ID="lblCodeEffectiveAddressColor">有效地址</Control>
+			<Control ID="lblCodeActiveStatementColor">当前语句</Control>
+			<Control ID="lblCodeActiveMidInstructionColor">当前语句（指令执行中）</Control>
+			<Control ID="lblCodeVerifiedDataColor">已验证数据</Control>
+			<Control ID="lblCodeUnidentifiedDataColor">未识别的数据块</Control>
+			<Control ID="lblCodeUnexecutedCodeColor">未执行代码</Control>
+			<Control ID="lblCodeExecBreakpointColor">执行断点</Control>
+			<Control ID="lblCodeWriteBreakpointColor">写入断点</Control>
+			<Control ID="lblCodeReadBreakpointColor">读取断点</Control>
+			<Control ID="lblForbidBreakpointColor">禁止断点</Control>
+			<Control ID="tabIntegration">集成</Control>
+			<Control ID="lblIntegrationSettings">集成设置</Control>
+			<Control ID="chkResetLabelsOnImport">导入标签/符号文件前，将工作区标签重置为默认状态</Control>
+			<Control ID="lblAutoLoadSettings">自动加载设置</Control>
+			<Control ID="lblAutoLoadHint">在 ROM 所在文件夹中找到匹配文件时，自动加载以下文件类型：</Control>
+			<Control ID="chkAutoLoadDbgFiles">.DBG 文件（CA65 调试符号）</Control>
+			<Control ID="chkAutoLoadSymFiles">.SYM 文件（PCEAS、RGBDS、WLA DX、bass）</Control>
+			<Control ID="chkAutoLoadCdbFiles">.CDB 文件（SDCC）</Control>
+			<Control ID="chkAutoLoadElfFiles">.ELF 文件（devkitARM - GBA）</Control>
+			<Control ID="chkAutoLoadMlbFiles">.MLB 文件（Mesen 标签文件）</Control>
+			<Control ID="chkAutoLoadFnsFiles">.FNS 文件（NESASM）</Control>
+			<Control ID="chkAutoLoadCdlFiles">.CDL 文件（代码/数据记录）</Control>
+			<Control ID="lblImportFilters">导入筛选</Control>
+			<Control ID="lblImportFiltersHint">导入以下类型的标签：</Control>
+			<Control ID="chkImportPrgRomLabels">ROM 标签</Control>
+			<Control ID="chkImportSaveRamLabels">存档 RAM 标签</Control>
+			<Control ID="chkImportWorkRamLabels">工作 RAM 标签</Control>
+			<Control ID="chkImportOtherLabels">其他标签</Control>
+			<Control ID="chkImportComments">导入注释（仅限上方选中的标签类型）</Control>
+			<Control ID="lblSourceView">源代码视图</Control>
+			<Control ID="lblTabSize">制表符宽度：</Control>
+			<Control ID="tabShortcuts">快捷键</Control>
+			<Control ID="tabShared">共享</Control>
+			<Control ID="tabMisc">其他</Control>
 		</Form>
 		<Form ID="WatchWindow">
 			<Control ID="wndTitle">监视窗口</Control>
@@ -904,6 +1114,16 @@ Windows：
 			<Control ID="btnReset">重置</Control>
 			<Control ID="btnRefresh">刷新</Control>
 			<Control ID="chkRefreshOnBreakPause">中断时刷新</Control>
+		
+			<Control ID="colFunction">函数（入口地址）</Control>
+			<Control ID="colCallCount">调用次数</Control>
+			<Control ID="colInclusiveTime">包含时间（周期）</Control>
+			<Control ID="colInclusiveTimePercent">包含时间（%）</Control>
+			<Control ID="colExclusiveTime">独占时间（周期）</Control>
+			<Control ID="colExclusiveTimePercent">独占时间（%）</Control>
+			<Control ID="colAvgCycles">平均周期</Control>
+			<Control ID="colMinCycles">最小周期</Control>
+			<Control ID="colMaxCycles">最大周期</Control>
 		</Form>
 		<Form ID="MemorySearchWindow">
 			<Control ID="wndTitle">内存搜索</Control>
@@ -979,6 +1199,13 @@ Windows：
 			<Control ID="lblAddress">地址：</Control>
 			<Control ID="lblCondition">条件：</Control>
 			<Control ID="chkEnableForbid">已启用</Control>
+		
+			<Control ID="wndTitleForbid">编辑禁止断点...</Control>
+			<Control ID="lblAddressTo">至 $</Control>
+			<Control ID="chkIgnoreDummyOperations">忽略虚拟读写操作</Control>
+			<Control ID="chkMark">在事件查看器中标记</Control>
+			<Control ID="chkEnable">启用执行中断</Control>
+			<Control ID="lblConditionError">条件包含无效的语法或符号。</Control>
 		</Form>
 		<Form ID="FirmwareSelect">
 			<Control ID="btnSelect">选择…</Control>
