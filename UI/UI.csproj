@@ -651,7 +651,7 @@
     <EmbeddedResource Include="Debugger\Utilities\LuaScripts\ReverseMode.lua" />
     <EmbeddedResource Include="Dependencies.zip" />
     <EmbeddedResource Include="Localization\resources.en.xml" WithCulture="false" Type="Non-Resx" />
-    <None Update="Localization\resources.zh-CN.xml" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="Localization\resources.zh-CN.xml" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
     <EmbeddedResource Include="Utilities\DipSwitchDefinitions.xml" />
   </ItemGroup>
   <ItemGroup>
