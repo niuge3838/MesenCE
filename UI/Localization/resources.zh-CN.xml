@@ -1778,9 +1778,17 @@ Windows：
 		</Enum>
 		<Enum ID="DspInterpolationType">
 			<Value ID="None">无</Value>
+		
+			<Value ID="Gauss">高斯插值（默认，精确）</Value>
+			<Value ID="Cubic">三次插值</Value>
+			<Value ID="Sinc">Sinc 插值</Value>
 		</Enum>
 		<Enum ID="SnesSuperScopeButtons">
 			<Value ID="Pause">暂停</Value>
+		
+			<Value ID="Fire">射击</Value>
+			<Value ID="Cursor">光标</Value>
+			<Value ID="Turbo">连发</Value>
 		</Enum>
 		<Enum ID="NesSuborKeyboardButtons">
 			<Value ID="Pause">暂停</Value>
@@ -1886,14 +1894,27 @@ Windows：
 		</Enum>
 		<Enum ID="GameSelectionMode">
 			<Value ID="Disabled">已禁用</Value>
+		
+			<Value ID="ResumeState">启用（从即时存档恢复）</Value>
+			<Value ID="PowerOn">启用（从开机状态重新开始）</Value>
 		</Enum>
 		<Enum ID="ConsoleRegion">
 			<Value ID="Auto">自动</Value>
+		
+			<Value ID="Ntsc">NTSC（60 FPS）</Value>
+			<Value ID="Pal">PAL（50 FPS）</Value>
+			<Value ID="Dendy">Dendy（50 FPS）</Value>
+			<Value ID="NtscJapan">NTSC - 日本（60 FPS）</Value>
 		</Enum>
 		<Enum ID="VideoAspectRatio">
 			<Value ID="NoStretching">不拉伸（默认）</Value>
 			<Value ID="Standard">标准（4:3）</Value>
 			<Value ID="Widescreen">宽屏（16:9）</Value>
+		
+			<Value ID="Auto">自动（NTSC/PAL）</Value>
+			<Value ID="NTSC">NTSC（8:7 像素宽高比）</Value>
+			<Value ID="PAL">PAL（11:8 像素宽高比）</Value>
+			<Value ID="Custom">自定义</Value>
 		</Enum>
 		<Enum ID="FullscreenResolution">
 			<Value ID="Default">默认</Value>
@@ -1922,6 +1943,10 @@ Windows：
 		</Enum>
 		<Enum ID="ScreenRotation">
 			<Value ID="None">无</Value>
+		
+			<Value ID="_90Degrees">90°</Value>
+			<Value ID="_180Degrees">180°</Value>
+			<Value ID="_270Degrees">270°</Value>
 		</Enum>
 		<Enum ID="VideoFilterType">
 			<Value ID="None">无</Value>
@@ -1961,18 +1986,29 @@ Windows：
 		</Enum>
 		<Enum ID="FontAntialiasing">
 			<Value ID="Disabled">已禁用</Value>
+		
+			<Value ID="Antialias">抗锯齿</Value>
+			<Value ID="SubPixelAntialias">子像素抗锯齿</Value>
 		</Enum>
 		<Enum ID="RecordMovieFrom">
 			<Value ID="StartWithoutSaveData">开机</Value>
 			<Value ID="CurrentState">当前状态</Value>
+		
+			<Value ID="StartWithSaveData">从开机状态开始，并加载存档数据</Value>
 		</Enum>
 		<Enum ID="AudioBackendType">
 			<Value ID="Default">默认</Value>
 			<Value ID="Wasapi">WASAPI（默认）</Value>
 			<Value ID="DirectSound">DirectSound（旧版）</Value>
+		
+			<Value ID="Sdl2">SDL2（默认）</Value>
 		</Enum>
 		<Enum ID="StereoFilter">
 			<Value ID="None">无</Value>
+		
+			<Value ID="Delay">延迟</Value>
+			<Value ID="Panning">声像</Value>
+			<Value ID="CombFilter">梳状滤波器</Value>
 		</Enum>
 		<Enum ID="GbLocalLinkOutputOption">
 			<Value ID="Both">两者</Value>
@@ -1981,6 +2017,9 @@ Windows：
 		</Enum>
 		<Enum ID="VsDualOutputOption">
 			<Value ID="Both">两者</Value>
+		
+			<Value ID="MainSystemOnly">仅主系统</Value>
+			<Value ID="SubSystemOnly">仅副系统</Value>
 		</Enum>
 		<Enum ID="GbaSaveType">
 			<Value ID="AutoDetect">自动检测</Value>
@@ -1998,6 +2037,9 @@ Windows：
 		</Enum>
 		<Enum ID="GbaDisassemblyMode">
 			<Value ID="Default">自动</Value>
+		
+			<Value ID="Arm">ARM</Value>
+			<Value ID="Thumb">Thumb</Value>
 		</Enum>
 		<Enum ID="MemorySizes">
 			<Value ID="None">无</Value>
@@ -2005,6 +2047,9 @@ Windows：
 		<Enum ID="FrameTiming">
 			<Value ID="Ntsc">NTSC</Value>
 			<Value ID="Pal">PAL</Value>
+		
+			<Value ID="NtscAndPal">NTSC 和 PAL</Value>
+			<Value ID="Dendy">Dendy</Value>
 		</Enum>
 		<Enum ID="MirroringType">
 			<Value ID="Horizontal">水平</Value>
@@ -2013,6 +2058,13 @@ Windows：
 		</Enum>
 		<Enum ID="VsSystemType">
 			<Value ID="Default">默认</Value>
+		
+			<Value ID="RbiBaseballProtection">RBI Baseball</Value>
+			<Value ID="TkoBoxingProtection">TKO Boxing</Value>
+			<Value ID="SuperXeviousProtection">Super Xevious</Value>
+			<Value ID="IceClimberProtection">Ice Climber</Value>
+			<Value ID="VsDualSystem">VS. 双系统</Value>
+			<Value ID="RaidOnBungelingBayProtection">Raid on Bungeling Bay</Value>
 		</Enum>
 		<Enum ID="GameInputType">
 			<Value ID="StandardControllers">标准控制器</Value>
@@ -2251,13 +2303,22 @@ Windows：
 			<Value ID="Auto">自动</Value>
 			<Value ID="Monochrome">WonderSwan</Value>
 			<Value ID="Color">WonderSwan Color</Value>
+		
+			<Value ID="PocketChallenge">Pocket Challenge V2</Value>
+			<Value ID="SwanCrystal">SwanCrystal</Value>
 		</Enum>
 		<Enum ID="TileLayout">
 			<Value ID="Normal">普通</Value>
 			<Value ID="Vertical">垂直</Value>
+		
+			<Value ID="SingleLine8x16">8×16（同一行）</Value>
+			<Value ID="SingleLine16x16">16×16（同一行）</Value>
 		</Enum>
 		<Enum ID="TileFilter">
 			<Value ID="None">无</Value>
+		
+			<Value ID="HideUsed">隐藏已使用的图块</Value>
+			<Value ID="HideUnused">隐藏未使用的图块</Value>
 		</Enum>
 		<Enum ID="TilemapBackground">
 			<Value ID="Default">默认</Value>
@@ -2271,29 +2332,45 @@ Windows：
 			<Value ID="Black">黑色</Value>
 			<Value ID="White">白色</Value>
 			<Value ID="Magenta">洋红色</Value>
+		
+			<Value ID="Default">默认（颜色 0）</Value>
+			<Value ID="PaletteColor">调色板颜色 0</Value>
 		</Enum>
 		<Enum ID="SpriteBackground">
 			<Value ID="Transparent">透明</Value>
 			<Value ID="Black">黑色</Value>
 			<Value ID="White">白色</Value>
 			<Value ID="Magenta">洋红色</Value>
+		
+			<Value ID="Gray">灰色</Value>
+			<Value ID="Background">颜色 0</Value>
 		</Enum>
 		<Enum ID="TilemapDisplayMode">
 			<Value ID="Default">默认</Value>
 			<Value ID="Grayscale">灰度</Value>
+		
+			<Value ID="AttributeView">属性视图</Value>
 		</Enum>
 		<Enum ID="TilemapMirroring">
 			<Value ID="None">无</Value>
 			<Value ID="Horizontal">水平</Value>
 			<Value ID="Vertical">垂直</Value>
 			<Value ID="FourScreens">四屏</Value>
+		
+			<Value ID="SingleScreenA">屏幕 A</Value>
+			<Value ID="SingleScreenB">屏幕 B</Value>
 		</Enum>
 		<Enum ID="TilemapHighlightMode">
 			<Value ID="Changes">变化</Value>
 			<Value ID="Writes">写入</Value>
+		
+			<Value ID="None">不高亮</Value>
 		</Enum>
 		<Enum ID="StatusFlagFormat">
 			<Value ID="Hexadecimal">十六进制</Value>
+		
+			<Value ID="Text">文本</Value>
+			<Value ID="CompactText">文本（仅活动状态）</Value>
 		</Enum>
 		<Enum ID="BreakSource">
 			<Value ID="Breakpoint">断点</Value>
@@ -2342,6 +2419,11 @@ Windows：
 			<Value ID="ExecOperand">执行</Value>
 			<Value ID="DmaRead">DMA 读取</Value>
 			<Value ID="DmaWrite">DMA 写入</Value>
+		
+			<Value ID="DummyRead">虚拟读取</Value>
+			<Value ID="DummyWrite">虚拟写入</Value>
+			<Value ID="PpuRenderingRead">PPU 渲染读取</Value>
+			<Value ID="Idle">空闲</Value>
 		</Enum>
 		<Enum ID="HighlightFadeSpeed">
 			<Value ID="NoFade">不渐隐</Value>
@@ -2357,6 +2439,8 @@ Windows：
 		<Enum ID="CodeDisplayMode">
 			<Value ID="Hide">隐藏</Value>
 			<Value ID="Show">显示</Value>
+		
+			<Value ID="Disassemble">反汇编</Value>
 		</Enum>
 		<Enum ID="AddressDisplayType">
 			<Value ID="CpuAddress">CPU 地址</Value>
@@ -2368,6 +2452,8 @@ Windows：
 			<Value ID="PreviousSearchValue">上一次的值</Value>
 			<Value ID="SpecificValue">指定数值：</Value>
 			<Value ID="SpecificAddress">指定地址：</Value>
+		
+			<Value ID="PreviousRefreshValue">上一次刷新时的数值</Value>
 		</Enum>
 		<Enum ID="MemorySearchOperator">
 			<Value ID="Equal">等于</Value>
@@ -2380,12 +2466,27 @@ Windows：
 		<Enum ID="DebugSpritePriority">
 			<Value ID="Foreground">前景</Value>
 			<Value ID="Background">背景</Value>
+		
+			<Value ID="Undefined">未定义</Value>
+			<Value ID="Number0">0</Value>
+			<Value ID="Number1">1</Value>
+			<Value ID="Number2">2</Value>
+			<Value ID="Number3">3</Value>
 		</Enum>
 		<Enum ID="GbaBgStereoMode">
 			<Value ID="Disabled">已禁用</Value>
+		
+			<Value ID="EvenColumns">偶数列</Value>
+			<Value ID="OddColumns">奇数列</Value>
+			<Value ID="Both">两者（奇数）</Value>
 		</Enum>
 		<Enum ID="DebugSpriteMode">
 			<Value ID="Normal">普通</Value>
+		
+			<Value ID="Undefined">未定义</Value>
+			<Value ID="Blending">混合</Value>
+			<Value ID="Window">窗口</Value>
+			<Value ID="Stereoscopic">立体</Value>
 		</Enum>
 		<Enum ID="SpriteVisibility">
 			<Value ID="Visible">可见</Value>
@@ -2404,6 +2505,14 @@ Windows：
 		</Enum>
 		<Enum ID="DebugEventType">
 			<Value ID="Breakpoint">断点</Value>
+		
+			<Value ID="Register">寄存器</Value>
+			<Value ID="Nmi">NMI</Value>
+			<Value ID="Irq">IRQ</Value>
+			<Value ID="BgColorChange">背景颜色变化</Value>
+			<Value ID="SpriteZeroHit">精灵 0 命中</Value>
+			<Value ID="DmcDmaRead">DMC 读取</Value>
+			<Value ID="DmaRead">OAM/其他 DMA 读取</Value>
 		</Enum>
 		<Enum ID="AddrMode">
 			<Value ID="None">无</Value>
