@@ -1407,5 +1407,167 @@ Windows：
 			<Value ID="Ws">WonderSwan</Value>
 			<Value ID="Pause">暂停</Value>
 		</Enum>
-	</Enums>
+	
+		<Enum ID="NesConsoleType">
+			<Value ID="Nes001">NES - 前置卡带仓（NES-001）</Value>
+			<Value ID="Nes101">NES - 顶部插卡式（NES-101）</Value>
+			<Value ID="Hvc001">Famicom（HVC-001）</Value>
+			<Value ID="Hvc101">AV Famicom（HVC-101）</Value>
+		</Enum>
+		<Enum ID="InputDisplayPosition">
+			<Value ID="TopLeft">左上</Value>
+			<Value ID="TopRight">右上</Value>
+			<Value ID="BottomLeft">左下</Value>
+			<Value ID="BottomRight">右下</Value>
+		</Enum>
+		<Enum ID="SnesHighResBlendMode">
+			<Value ID="None">无（默认）</Value>
+			<Value ID="BlendAll">混合整个画面</Value>
+			<Value ID="BlendEvenOdd">混合奇数/偶数列（模拟透明效果）</Value>
+		</Enum>
+		<Enum ID="SnesColorCorrectionMode">
+			<Value ID="None">无（默认）</Value>
+			<Value ID="NtscBlackLevel">NTSC-U 黑电平</Value>
+			<Value ID="DeepBlackBoost">深黑增强（ares）</Value>
+		</Enum>
+		<Enum ID="SnesDeinterlaceMode">
+			<Value ID="Weave">交错（默认）</Value>
+			<Value ID="BobBlend">Bob + 混合</Value>
+			<Value ID="Bob">Bob</Value>
+			<Value ID="CurrentField">仅显示当前场</Value>
+		</Enum>
+		<Enum ID="PceConsoleType">
+			<Value ID="Auto">自动（推荐）</Value>
+			<Value ID="PcEngine">PC Engine（日版）</Value>
+			<Value ID="SuperGrafx">PC Engine SuperGrafx（日版）</Value>
+			<Value ID="TurboGrafx">TurboGrafx-16（北美版）</Value>
+		</Enum>
+		<Enum ID="PceCdRomType">
+			<Value ID="CdRom">CD-ROM²</Value>
+			<Value ID="SuperCdRom">Super CD-ROM²</Value>
+			<Value ID="Arcade">Arcade CD-ROM²（推荐）</Value>
+		</Enum>
+		<Enum ID="PceEventViewerSgxFilter">
+			<Value ID="Both">显示两者</Value>
+			<Value ID="Vdc1">仅 VDC1</Value>
+			<Value ID="Vdc2">仅 VDC2</Value>
+		</Enum>
+		<Enum ID="VideoCodec">
+			<Value ID="None">无（未压缩）</Value>
+			<Value ID="ZMBV">Zip Motion Block Video（ZMBV）</Value>
+			<Value ID="CSCD">Camstudio（CSCD）</Value>
+			<Value ID="GIF">GIF</Value>
+		</Enum>
+		<Enum ID="AudioSampleRate">
+			<Value ID="_11025">11,025 Hz</Value>
+			<Value ID="_22050">22,050 Hz</Value>
+			<Value ID="_32000">32,000 Hz</Value>
+			<Value ID="_44100">44,100 Hz</Value>
+			<Value ID="_48000">48,000 Hz</Value>
+			<Value ID="_96000">96,000 Hz</Value>
+		</Enum>
+		<Enum ID="CheatType">
+			<Value ID="NesGameGenie">NES - Game Genie（例如：SXUGTPVG）</Value>
+			<Value ID="NesProActionRocky">NES - Pro Action Rocky（例如：ADEE5710）</Value>
+			<Value ID="NesCustom">NES - 自定义（AAAA:VV:CC）</Value>
+			<Value ID="GbGameGenie">Game Boy - Game Genie（例如：A1B-2C3-D4E）</Value>
+			<Value ID="GbGameShark">Game Boy - Game Shark（例如：01A0A3DF）</Value>
+			<Value ID="SnesGameGenie">SNES - Game Genie（例如：A1B2-C3D4）</Value>
+			<Value ID="SnesProActionReplay">SNES - Pro Action Replay（AAAAAAVV）</Value>
+			<Value ID="PceRaw">原始格式（AAAAAA:VV）</Value>
+			<Value ID="PceAddress">物理地址（AAAAAA:VV）</Value>
+			<Value ID="SmsGameGenie">SMS - Game Genie（例如：A1B-2C3-D4E）</Value>
+			<Value ID="SmsProActionReplay">SMS - Pro Action Replay（例如：00AAAAVV）</Value>
+		</Enum>
+		<Enum ID="VideoLayer">
+			<Value ID="Bg1">背景层 1</Value>
+			<Value ID="Bg2">背景层 2</Value>
+			<Value ID="Bg3">背景层 3</Value>
+			<Value ID="Bg4">背景层 4</Value>
+			<Value ID="Sprite1">精灵层 1</Value>
+			<Value ID="Sprite2">精灵层 2</Value>
+		</Enum>
+		<Enum ID="SmsRevision">
+			<Value ID="Compatibility">兼容模式（默认）</Value>
+			<Value ID="Sms1">SMS 1</Value>
+			<Value ID="Sms2">SMS 2</Value>
+		</Enum>
+		<Enum ID="MemorySizes">
+			<Value ID="_128Bytes">128 字节</Value>
+			<Value ID="_256Bytes">256 字节</Value>
+			<Value ID="_512Bytes">512 字节</Value>
+			<Value ID="_1KB">1 KB</Value>
+			<Value ID="_2KB">2 KB</Value>
+			<Value ID="_4KB">4 KB</Value>
+			<Value ID="_8KB">8 KB</Value>
+			<Value ID="_16KB">16 KB</Value>
+			<Value ID="_32KB">32 KB</Value>
+			<Value ID="_64KB">64 KB</Value>
+			<Value ID="_128KB">128 KB</Value>
+			<Value ID="_256KB">256 KB</Value>
+			<Value ID="_512KB">512 KB</Value>
+			<Value ID="_1024KB">1024 KB</Value>
+			<Value ID="Reserved">保留（$F）</Value>
+		</Enum>
+		<Enum ID="TvSystem">
+			<Value ID="NesFamicomDendy">NES / Famicom / Dendy</Value>
+			<Value ID="VsSystem">VS System</Value>
+			<Value ID="Playchoice">Playchoice-10</Value>
+			<Value ID="CloneWithDecimal">带十进制模式的 Famicom 兼容机</Value>
+			<Value ID="EpsmModule">带 EPSM 模块的 NES/Famicom</Value>
+			<Value ID="Vt01RedCyan">VT01 红/青</Value>
+			<Value ID="Vt02">VT02</Value>
+			<Value ID="Vt03">VT03</Value>
+			<Value ID="Vt09">VT09</Value>
+			<Value ID="Vt32">VT32</Value>
+			<Value ID="Vt369">VT369</Value>
+			<Value ID="UmcUm6578">UMC UM6578</Value>
+			<Value ID="FamicomNetworkSystem">Famicom 网络系统</Value>
+			<Value ID="ReservedD">保留（$D）</Value>
+			<Value ID="ReservedE">保留（$E）</Value>
+			<Value ID="ReservedF">保留（$F）</Value>
+		</Enum>
+		<Enum ID="NesFileType">
+			<Value ID="iNes">iNES</Value>
+			<Value ID="Nes2_0">NES 2.0</Value>
+		</Enum>
+		<Enum ID="RomSizeUnit">
+			<Value ID="Bytes">字节</Value>
+			<Value ID="KB">KB</Value>
+			<Value ID="MB">MB</Value>
+		</Enum>
+		<Enum ID="VsPpuType">
+			<Value ID="ReservedD">保留（$D）</Value>
+			<Value ID="ReservedE">保留（$E）</Value>
+			<Value ID="ReservedF">保留（$F）</Value>
+		</Enum>
+		<Enum ID="WsAudioMode">
+			<Value ID="Headphones">耳机（推荐）</Value>
+			<Value ID="Speaker">扬声器</Value>
+		</Enum>
+		<Enum ID="HudDisplaySize">
+			<Value ID="Fixed">固定大小</Value>
+			<Value ID="Scaled">随游戏缩放</Value>
+		</Enum>
+		<Enum ID="TileFormat">
+			<Value ID="NesBpp2">2 bpp</Value>
+			<Value ID="Bpp2">2 bpp</Value>
+			<Value ID="Bpp4">4 bpp</Value>
+			<Value ID="Bpp8">8 bpp</Value>
+			<Value ID="DirectColor">直接色彩</Value>
+			<Value ID="Mode7">Mode 7</Value>
+			<Value ID="Mode7DirectColor">Mode 7 - 直接色彩</Value>
+			<Value ID="Mode7ExtBg">Mode 7 - 扩展背景</Value>
+			<Value ID="SmsBpp4">4 bpp</Value>
+			<Value ID="SmsSgBpp1">1 bpp</Value>
+			<Value ID="GbaBpp4">4 bpp</Value>
+			<Value ID="GbaBpp8">8 bpp</Value>
+			<Value ID="WsBpp4Packed">4 bpp（打包）</Value>
+		</Enum>
+		<Enum ID="GameboyModel">
+			<Value ID="AutoFavorBest">自动（优先最佳兼容性）</Value>
+			<Value ID="AutoFavorGbc">自动（优先 Game Boy Color）</Value>
+			<Value ID="AutoFavorSgb">自动（优先 Super Game Boy）</Value>
+			<Value ID="AutoFavorGb">自动（优先 Game Boy）</Value>
+		</Enum></Enums>
 </Resources>
