@@ -1,0 +1,847 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resources>
+	<Forms>
+		<Form ID="MainMenuView">
+			<Control ID="mnuFile">文件(_F)</Control>
+			<Control ID="mnuGame">游戏(_G)</Control>
+			<Control ID="mnuOptions">设置(_S)</Control>
+			<Control ID="mnuTools">工具(_T)</Control>
+			<Control ID="mnuDebug">调试(_D)</Control>
+			<Control ID="mnuHelp">帮助(_H)</Control>
+		</Form>
+		<Form ID="AudioConfigView">
+			<Control ID="tpgGeneral">常规</Control>
+			<Control ID="chkMuteSoundInBackground">后台运行时静音</Control>
+			<Control ID="chkReduceSoundInBackground">后台运行时降低音量</Control>
+			<Control ID="chkReduceSoundInFastForward">快进/倒带时降低音量</Control>
+			<Control ID="lblVolumeReduction">音量降低比例 (%)</Control>
+			<Control ID="lblVolumeReductionSettings">音量降低设置</Control>
+			<Control ID="chkEnableAudio">启用音频</Control>
+			<Control ID="lblSampleRate">采样率：</Control>
+			<Control ID="lblAudioLatency">延迟：</Control>
+			<Control ID="lblAudioDriver">驱动：</Control>
+			<Control ID="lblAudioDevice">设备：</Control>
+			<Control ID="lblVolume">音量：</Control>
+			<Control ID="grpVolume">音量</Control>
+			<Control ID="btnReset">恢复默认值</Control>
+			<Control ID="lblAudioPlayerSettings">音频播放器设置</Control>
+			<Control ID="tpgAdvanced">高级</Control>
+			<Control ID="chkEnableEqualizer">启用均衡器</Control>
+		</Form>
+		<Form ID="NesInputConfigView">
+			<Control ID="grpControllers">控制器</Control>
+			<Control ID="grpGeneral">常规</Control>
+			<Control ID="lblSmall">小</Control>
+			<Control ID="lblLarge">大</Control>
+			<Control ID="btnSetup">设置</Control>
+			<Control ID="lblPlayer1">接口 1：</Control>
+			<Control ID="lblPlayer2">接口 2：</Control>
+			<Control ID="lblPort1A">接口 1：</Control>
+			<Control ID="lblPort1B">接口 2：</Control>
+			<Control ID="lblPort1C">接口 3：</Control>
+			<Control ID="lblPort1D">接口 4：</Control>
+			<Control ID="lblExpPortA">接口 1：</Control>
+			<Control ID="lblExpPortB">接口 2：</Control>
+			<Control ID="lblExpPortC">接口 3：</Control>
+			<Control ID="lblExpPortD">接口 4：</Control>
+		</Form>
+		<Form ID="SnesInputConfigView">
+			<Control ID="lblPort1">接口 1：</Control>
+			<Control ID="lblPort2">接口 2：</Control>
+			<Control ID="lblMultitap1A">接口 1：</Control>
+			<Control ID="lblMultitap1B">接口 2：</Control>
+			<Control ID="lblMultitap1C">接口 3：</Control>
+			<Control ID="lblMultitap1D">接口 4：</Control>
+			<Control ID="lblMultitap2A">接口 1：</Control>
+			<Control ID="lblMultitap2B">接口 2：</Control>
+			<Control ID="lblMultitap2C">接口 3：</Control>
+			<Control ID="lblMultitap2D">接口 4：</Control>
+			<Control ID="grpControllers">控制器</Control>
+			<Control ID="grpGeneral">常规</Control>
+		</Form>
+		<Form ID="InputConfigView">
+			<Control ID="tpgGeneral">常规</Control>
+			<Control ID="lblSmall">小</Control>
+			<Control ID="lblLarge">大</Control>
+			<Control ID="lblLow">慢</Control>
+			<Control ID="lblHigh">快</Control>
+			<Control ID="lblForceFeedbackLow">已禁用</Control>
+			<Control ID="lblForceFeedbackHigh">最大</Control>
+			<Control ID="tpgDisplay">显示</Control>
+			<Control ID="chkDisplayPort1">玩家 1</Control>
+			<Control ID="chkDisplayPort2">玩家 2</Control>
+		</Form>
+		<Form ID="InputComboBox">
+			<Control ID="btnSetup">设置</Control>
+		</Form>
+		<Form ID="OverscanInput">
+			<Control ID="lblLeft">左</Control>
+			<Control ID="lblTop">上</Control>
+			<Control ID="lblBottom">下</Control>
+			<Control ID="lblRight">右</Control>
+		</Form>
+		<Form ID="VideoConfigView">
+			<Control ID="tpgGeneral">常规</Control>
+			<Control ID="lblDisplayRatio">画面比例：</Control>
+			<Control ID="lblCustomRatio">自定义比例：</Control>
+			<Control ID="lblFullscreenResolution">全屏分辨率：</Control>
+			<Control ID="btnSelectPreset">选择预设…</Control>
+			<Control ID="btnReset">重置</Control>
+			<Control ID="lblPictureSettings">常规设置</Control>
+			<Control ID="grpScanlines">扫描线</Control>
+			<Control ID="trkScanlines">扫描线</Control>
+			<Control ID="btnResetPictureSettings">重置</Control>
+			<Control ID="tpgAdvanced">高级</Control>
+		</Form>
+		<Form ID="EmulationConfigView">
+			<Control ID="tpgGeneral">常规</Control>
+		</Form>
+		<Form ID="VideoConfigOverrideView">
+			<Control ID="lblCustomRatio">自定义比例：</Control>
+		</Form>
+		<Form ID="ShaderSelector">
+			<Control ID="btnLoadShader">加载着色器…</Control>
+		</Form>
+		<Form ID="SnesConfigView">
+			<Control ID="tpgGeneral">常规</Control>
+			<Control ID="lblRegion">区域：</Control>
+			<Control ID="tpgAudio">音频</Control>
+			<Control ID="lblAudioInterpolation">音频插值类型：</Control>
+			<Control ID="grpVolume">音量</Control>
+			<Control ID="tpgEmulation">模拟</Control>
+			<Control ID="tpgInput">输入</Control>
+			<Control ID="tpgOverclocking">超频</Control>
+			<Control ID="tpgVideo">视频</Control>
+		</Form>
+		<Form ID="NesConfigView">
+			<Control ID="tpgGeneral">常规</Control>
+			<Control ID="lblRegion">区域：</Control>
+			<Control ID="tpgInput">输入</Control>
+			<Control ID="tpgVideo">视频</Control>
+			<Control ID="lblPalette">调色板</Control>
+			<Control ID="tpgAudio">音频</Control>
+			<Control ID="grpGeneral">常规</Control>
+			<Control ID="lblAdvanced">高级</Control>
+			<Control ID="tpgOverclocking">超频</Control>
+			<Control ID="tpgEmulation">模拟</Control>
+		</Form>
+		<Form ID="GameboyConfigView">
+			<Control ID="tpgGeneral">常规</Control>
+			<Control ID="tpgEmulation">模拟</Control>
+			<Control ID="grpGeneral">常规</Control>
+			<Control ID="grpOverclocking">超频</Control>
+			<Control ID="lblOverclockScanlineCount">额外扫描线：</Control>
+			<Control ID="tpgVideo">视频</Control>
+			<Control ID="btnSelectPreset">选择预设…</Control>
+			<Control ID="tpgAudio">音频</Control>
+			<Control ID="grpVolume">音量</Control>
+			<Control ID="tpgInput">输入</Control>
+			<Control ID="grpControllers">控制器</Control>
+			<Control ID="lblPlayer1">玩家 1</Control>
+			<Control ID="lblPlayer2">玩家 2</Control>
+			<Control ID="btnSetup">设置</Control>
+		</Form>
+		<Form ID="GbaConfigView">
+			<Control ID="tpgGeneral">常规</Control>
+			<Control ID="chkSkipBootScreen">跳过启动画面</Control>
+			<Control ID="tpgEmulation">模拟</Control>
+			<Control ID="lblSaveType">存档类型：</Control>
+			<Control ID="lblRtcType">实时时钟：</Control>
+			<Control ID="grpGeneral">常规</Control>
+			<Control ID="grpOverclocking">超频</Control>
+			<Control ID="lblOverclockScanlineCount">额外扫描线：</Control>
+			<Control ID="tpgVideo">视频</Control>
+			<Control ID="tpgAudio">音频</Control>
+			<Control ID="grpVolume">音量</Control>
+			<Control ID="tpgInput">输入</Control>
+			<Control ID="grpControllers">控制器</Control>
+			<Control ID="lblPlayer1">玩家 1</Control>
+			<Control ID="btnSetup">设置</Control>
+		</Form>
+		<Form ID="PceConfigView">
+			<Control ID="tpgGeneral">常规</Control>
+			<Control ID="lblConsoleType">主机类型：</Control>
+			<Control ID="lblCdRomType">CD-ROM 系统：</Control>
+			<Control ID="tpgAudio">音频</Control>
+			<Control ID="grpVolume">音量</Control>
+			<Control ID="tpgEmulation">模拟</Control>
+			<Control ID="tpgInput">输入</Control>
+			<Control ID="tpgVideo">视频</Control>
+			<Control ID="lblPalette">调色板</Control>
+		</Form>
+		<Form ID="ColorPickerWindow">
+			<Control ID="wndTitle">颜色选择器</Control>
+		</Form>
+		<Form ID="PaletteConfig">
+			<Control ID="btnSelectPalette">加载预设调色板…</Control>
+			<Control ID="btnExportPalette">导出调色板</Control>
+			<Control ID="btnLoadPalFile">加载调色板文件</Control>
+		</Form>
+		<Form ID="PceInputConfigView">
+			<Control ID="grpControllers">控制器</Control>
+			<Control ID="btnSetup">设置</Control>
+			<Control ID="lblPort1A">接口 1：</Control>
+			<Control ID="lblPort1B">接口 2：</Control>
+			<Control ID="lblPort1C">接口 3：</Control>
+			<Control ID="lblPort1D">接口 4：</Control>
+			<Control ID="grpGeneral">常规</Control>
+		</Form>
+		<Form ID="SmsConfigView">
+			<Control ID="tpgGeneral">常规</Control>
+			<Control ID="tpgAudio">音频</Control>
+			<Control ID="grpVolume">音量</Control>
+			<Control ID="tpgEmulation">模拟</Control>
+			<Control ID="tpgInput">输入</Control>
+			<Control ID="tpgVideo">视频</Control>
+			<Control ID="btnSelectPreset">选择预设…</Control>
+		</Form>
+		<Form ID="SmsInputConfigView">
+			<Control ID="grpControllers">控制器</Control>
+			<Control ID="btnSetup">设置</Control>
+			<Control ID="lblController1">接口 1：</Control>
+			<Control ID="lblController2">接口 2：</Control>
+			<Control ID="grpGeneral">常规</Control>
+			<Control ID="grpGeneral">常规</Control>
+		</Form>
+		<Form ID="CvConfigView">
+			<Control ID="tpgGeneral">常规</Control>
+			<Control ID="lblRegion">区域：</Control>
+			<Control ID="tpgAudio">音频</Control>
+			<Control ID="grpVolume">音量</Control>
+			<Control ID="tpgEmulation">模拟</Control>
+			<Control ID="tpgInput">输入</Control>
+			<Control ID="tpgVideo">视频</Control>
+			<Control ID="grpControllers">控制器</Control>
+			<Control ID="btnSetup">设置</Control>
+			<Control ID="lblController1">接口 1：</Control>
+			<Control ID="lblController2">接口 2：</Control>
+		</Form>
+		<Form ID="WsConfigView">
+			<Control ID="tpgGeneral">常规</Control>
+			<Control ID="tpgEmulation">模拟</Control>
+			<Control ID="tpgVideo">视频</Control>
+			<Control ID="tpgAudio">音频</Control>
+			<Control ID="grpVolume">音量</Control>
+			<Control ID="tpgInput">输入</Control>
+			<Control ID="grpControllers">控制器</Control>
+			<Control ID="btnSetup">设置</Control>
+		</Form>
+		<Form ID="ConfigWindow">
+			<Control ID="wndTitle">设置</Control>
+			<Control ID="tabAudio">音频</Control>
+			<Control ID="tabEmulation">模拟</Control>
+			<Control ID="tabInput">输入</Control>
+			<Control ID="tabVideo">视频</Control>
+		</Form>
+		<Form ID="PreferencesConfigView">
+			<Control ID="tpgGeneral">常规</Control>
+			<Control ID="tpgAdvanced">高级</Control>
+			<Control ID="chkShowFrameCounter">显示帧计数器</Control>
+		</Form>
+		<Form ID="CheatListWindow">
+			<Control ID="btnDeleteCheat">删除</Control>
+			<Control ID="mnuDeleteCheat">删除</Control>
+		</Form>
+		<Form ID="CheatEditWindow">
+			<Control ID="lblFormat">格式：</Control>
+		</Form>
+		<Form ID="CommandLineHelpWindow">
+			<Control ID="btnOk">关闭</Control>
+		</Form>
+		<Form ID="ShaderConfigWindow">
+			<Control ID="btnReset">恢复默认值</Control>
+		</Form>
+		<Form ID="SelectRomWindow">
+			<Control ID="lblSearch">搜索：</Control>
+		</Form>
+		<Form ID="CheatDatabaseWindow">
+			<Control ID="lblSearch">搜索：</Control>
+		</Form>
+		<Form ID="ControllerConfigWindow">
+			<Control ID="lblTurboFast">快</Control>
+			<Control ID="lblTurboSlow">慢</Control>
+			<Control ID="btnSelectPreset">选择预设…</Control>
+		</Form>
+		<Form ID="TilemapViewerWindow">
+			<Control ID="wndTitle">图块地图查看器</Control>
+			<Control ID="mnuFile">文件(_F)</Control>
+			<Control ID="mnuView">视图(_V)</Control>
+		</Form>
+		<Form ID="TileEditorWindow">
+			<Control ID="mnuFile">文件(_F)</Control>
+			<Control ID="mnuView">视图(_V)</Control>
+			<Control ID="mnuTools">工具(_T)</Control>
+		</Form>
+		<Form ID="TileViewerWindow">
+			<Control ID="wndTitle">图块查看器</Control>
+			<Control ID="mnuFile">文件(_F)</Control>
+			<Control ID="mnuView">视图(_V)</Control>
+			<Control ID="lblAddress">地址：</Control>
+			<Control ID="lblFormat">格式：</Control>
+		</Form>
+		<Form ID="PaletteViewerWindow">
+			<Control ID="wndTitle">调色板查看器</Control>
+			<Control ID="mnuFile">文件(_F)</Control>
+			<Control ID="mnuView">视图(_V)</Control>
+			<Control ID="chkShowPaletteIndexes">显示调色板索引</Control>
+			<Control ID="lblSelectedColor">选中的颜色</Control>
+		</Form>
+		<Form ID="ColorIndexPickerWindow">
+			<Control ID="wndTitle">选择颜色…</Control>
+		</Form>
+		<Form ID="SpriteViewerWindow">
+			<Control ID="wndTitle">精灵图查看器</Control>
+			<Control ID="mnuFile">文件(_F)</Control>
+			<Control ID="mnuView">视图(_V)</Control>
+			<Control ID="colPriority">优先级</Control>
+			<Control ID="colPalette">调色板</Control>
+			<Control ID="colFlags">标志</Control>
+			<Control ID="colVisible">可见</Control>
+			<Control ID="chkShowListView">显示列表视图</Control>
+		</Form>
+		<Form ID="AssemblerWindow">
+			<Control ID="wndTitle">汇编器</Control>
+			<Control ID="mnuFile">文件(_F)</Control>
+			<Control ID="mnuOptions">设置(_S)</Control>
+			<Control ID="lblStartAddress">起始地址：$</Control>
+			<Control ID="lblBytesUsed">已用字节数：</Control>
+			<Control ID="btnOk">应用</Control>
+		</Form>
+		<Form ID="ScriptWindow">
+			<Control ID="wndTitle">脚本窗口</Control>
+			<Control ID="mnuFile">文件(_F)</Control>
+			<Control ID="mnuScript">脚本(_S)</Control>
+			<Control ID="mnuHelp">帮助(_H)</Control>
+			<Control ID="btnRun">运行</Control>
+			<Control ID="btnStop">停止</Control>
+		</Form>
+		<Form ID="LogWindow">
+			<Control ID="wndTitle">日志窗口</Control>
+			<Control ID="btnClose">关闭</Control>
+		</Form>
+		<Form ID="DebugLogWindow">
+			<Control ID="wndTitle">调试日志</Control>
+			<Control ID="btnClose">关闭</Control>
+		</Form>
+		<Form ID="HistoryViewerWindow">
+			<Control ID="wndTitle">历史记录查看器</Control>
+			<Control ID="lblVolume">音量</Control>
+			<Control ID="mnuOptions">设置</Control>
+		</Form>
+		<Form ID="HistoryViewerRangePickerWindow">
+			<Control ID="wndTitle">导出指定范围…</Control>
+			<Control ID="lblStartTime">开始时间：</Control>
+			<Control ID="lblEndTime">结束时间：</Control>
+		</Form>
+		<Form ID="NesHeaderEditWindow">
+			<Control ID="wndTitle">NES 头信息编辑器</Control>
+			<Control ID="lblFileType">文件类型：</Control>
+			<Control ID="lblMapper">映射器：</Control>
+			<Control ID="lblSubmapper">子映射器：</Control>
+			<Control ID="lblMirroringType">镜像类型：</Control>
+			<Control ID="lblFrameTiming">帧时序：</Control>
+			<Control ID="lblSystem">系统：</Control>
+			<Control ID="lblInputType">输入类型：</Control>
+		</Form>
+		<Form ID="TraceLoggerWindow">
+			<Control ID="wndTitle">跟踪记录器</Control>
+			<Control ID="chkEnabled">已启用</Control>
+			<Control ID="chkCustomFormat">使用自定义格式：</Control>
+			<Control ID="chkRegisters">显示寄存器</Control>
+			<Control ID="chkStatusFlags">显示状态标志</Control>
+			<Control ID="chkByteCode">显示机器码</Control>
+			<Control ID="chkMemoryValue">显示内存值</Control>
+			<Control ID="chkClockCounter">显示时钟计数器</Control>
+			<Control ID="chkFrameCounter">显示帧计数器</Control>
+			<Control ID="chkFramePosition">显示帧位置</Control>
+			<Control ID="chkUseLabels">使用标签</Control>
+			<Control ID="mnuFile">文件(_F)</Control>
+			<Control ID="mnuDebug">调试(_D)</Control>
+			<Control ID="mnuView">视图(_V)</Control>
+			<Control ID="mnuSearch">搜索(_S)</Control>
+		</Form>
+		<Form ID="EventViewerWindow">
+			<Control ID="wndTitle">事件查看器</Control>
+			<Control ID="mnuFile">文件(_F)</Control>
+			<Control ID="mnuDebug">调试(_D)</Control>
+			<Control ID="mnuView">视图(_V)</Control>
+			<Control ID="chkShowListView">显示列表视图</Control>
+			<Control ID="colType">类型</Control>
+			<Control ID="colAddress">地址</Control>
+			<Control ID="colValue">数值</Control>
+			<Control ID="colDetails">详情</Control>
+		</Form>
+		<Form ID="DebuggerWindow">
+			<Control ID="mnuFile">文件(_F)</Control>
+			<Control ID="mnuDebug">调试(_D)</Control>
+			<Control ID="mnuSearch">搜索(_S)</Control>
+			<Control ID="mnuOptions">设置(_S)</Control>
+		</Form>
+		<Form ID="BreakpointListView">
+			<Control ID="colType">类型</Control>
+			<Control ID="colAddress">地址</Control>
+		</Form>
+		<Form ID="CallStackView">
+			<Control ID="colFunction">函数</Control>
+		</Form>
+		<Form ID="FindResultListView">
+			<Control ID="colAddress">地址</Control>
+		</Form>
+		<Form ID="FunctionListView">
+			<Control ID="colFunction">函数</Control>
+		</Form>
+		<Form ID="WatchListView">
+			<Control ID="colName">名称</Control>
+			<Control ID="colValue">数值</Control>
+		</Form>
+		<Form ID="QuickSearchView">
+			<Control ID="lblSearch">搜索</Control>
+		</Form>
+		<Form ID="SourceViewView">
+			<Control ID="lblFile">文件：</Control>
+		</Form>
+		<Form ID="DebuggerOptionsView">
+			<Control ID="chkShowByteCode">显示机器码</Control>
+			<Control ID="lblBreakOptions">中断条件…</Control>
+		</Form>
+		<Form ID="MemoryToolsWindow">
+			<Control ID="wndTitle">内存查看器</Control>
+			<Control ID="mnuFile">文件(_F)</Control>
+			<Control ID="mnuView">视图(_V)</Control>
+			<Control ID="mnuSearch">搜索(_S)</Control>
+			<Control ID="lblMemoryType">内存类型：</Control>
+		</Form>
+		<Form ID="MemoryToolsDisplayOptionsView">
+			<Control ID="chkHighlightRead">读取次数</Control>
+			<Control ID="chkHighlightWrite">写入次数</Control>
+			<Control ID="chkHighlightExec">执行</Control>
+			<Control ID="chkHighlightCode">代码</Control>
+			<Control ID="chkHighlightData">数据</Control>
+		</Form>
+		<Form ID="MemoryViewerFindWindow">
+			<Control ID="wndTitle">查找…</Control>
+			<Control ID="lblSearch">搜索：</Control>
+			<Control ID="lblDataType">数据类型：</Control>
+			<Control ID="lblIntType">格式：</Control>
+			<Control ID="chkCaseSensitive">区分大小写</Control>
+			<Control ID="chkFilterCode">代码</Control>
+			<Control ID="chkFilterData">数据</Control>
+			<Control ID="chkFilterRead">读取</Control>
+			<Control ID="chkFilterExec">已执行</Control>
+			<Control ID="lblFrames">帧</Control>
+			<Control ID="lblNoMatchFound">未找到匹配项！</Control>
+			<Control ID="btnClose">关闭</Control>
+		</Form>
+		<Form ID="FontOptionsView">
+			<Control ID="lblFamily">字体：</Control>
+			<Control ID="lblSize">大小：</Control>
+		</Form>
+		<Form ID="RefreshTimingView">
+			<Control ID="lblResetToDefault">恢复默认值</Control>
+			<Control ID="chkRefreshOnBreakPause">中断时刷新</Control>
+		</Form>
+		<Form ID="GoToAllWindow">
+			<Control ID="wndTitle">转到全部</Control>
+			<Control ID="lblSearch">搜索：</Control>
+			<Control ID="lblResults">条结果</Control>
+			<Control ID="btnSelect">选择</Control>
+			<Control ID="btnClose">关闭</Control>
+		</Form>
+		<Form ID="DebuggerConfigWindow">
+			<Control ID="wndTitle">调试器设置</Control>
+			<Control ID="lblGeneralSettings">常规设置</Control>
+			<Control ID="tabScriptWindow">脚本窗口</Control>
+			<Control ID="tabMemoryTools">内存查看器</Control>
+		</Form>
+		<Form ID="WatchWindow">
+			<Control ID="wndTitle">监视窗口</Control>
+		</Form>
+		<Form ID="ProfilerWindow">
+			<Control ID="wndTitle">性能分析器</Control>
+			<Control ID="mnuFile">文件(_F)</Control>
+			<Control ID="mnuView">视图(_V)</Control>
+			<Control ID="btnReset">重置</Control>
+			<Control ID="btnRefresh">刷新</Control>
+			<Control ID="chkRefreshOnBreakPause">中断时刷新</Control>
+		</Form>
+		<Form ID="MemorySearchWindow">
+			<Control ID="wndTitle">内存搜索</Control>
+			<Control ID="btnApplyFilter">应用筛选</Control>
+			<Control ID="btnUpdateValues">更新数值</Control>
+			<Control ID="btnReset">重置</Control>
+			<Control ID="btnUndo">撤销</Control>
+			<Control ID="btnResetCounters">重置访问统计</Control>
+			<Control ID="lblMemType">内存类型：</Control>
+			<Control ID="lblFormat">格式：</Control>
+			<Control ID="lblValueSize">数值大小：</Control>
+			<Control ID="lblSearchFilter">搜索筛选</Control>
+			<Control ID="lblCompareTo">比较对象</Control>
+			<Control ID="lblOperator">运算符</Control>
+			<Control ID="colAddress">地址</Control>
+			<Control ID="colValue">数值</Control>
+			<Control ID="colReadCount">读取次数</Control>
+			<Control ID="colWriteCount">写入次数</Control>
+		</Form>
+		<Form ID="GoToWindow">
+			<Control ID="wndTitle">转到地址…</Control>
+			<Control ID="lblAddress">地址：</Control>
+		</Form>
+		<Form ID="FindAllOccurrencesWindow">
+			<Control ID="wndTitle">查找所有匹配项…</Control>
+			<Control ID="lblSearch">搜索：</Control>
+			<Control ID="chkMatchCase">区分大小写</Control>
+			<Control ID="chkMatchWholeWord">全字匹配</Control>
+			<Control ID="btnFind">查找</Control>
+		</Form>
+		<Form ID="BreakInWindow">
+			<Control ID="wndTitle">中断…</Control>
+			<Control ID="lblCpuInst">CPU 指令</Control>
+			<Control ID="lblCpuCycles">CPU 周期</Control>
+			<Control ID="lblPpuCycles">PPU 周期</Control>
+			<Control ID="lblPpuScanlines">扫描线</Control>
+			<Control ID="lblPpuFrames">帧</Control>
+		</Form>
+		<Form ID="BreakOnWindow">
+			<Control ID="wndTitle">运行至扫描线…</Control>
+			<Control ID="lblBreakOn">扫描线编号：</Control>
+		</Form>
+		<Form ID="LabelEditWindow">
+			<Control ID="wndTitle">编辑标签…</Control>
+			<Control ID="lblMemoryType">内存类型：</Control>
+			<Control ID="lblAddress">地址：</Control>
+			<Control ID="lblLabel">标签：</Control>
+			<Control ID="lblComment">注释：</Control>
+			<Control ID="lblLength">长度：</Control>
+			<Control ID="lblBytes">字节</Control>
+			<Control ID="btnDelete">删除标签</Control>
+		</Form>
+		<Form ID="CommentEditWindow">
+			<Control ID="wndTitle">编辑注释…</Control>
+		</Form>
+		<Form ID="RegisterViewerWindow">
+			<Control ID="wndTitle">寄存器查看器</Control>
+			<Control ID="mnuFile">文件(_F)</Control>
+			<Control ID="mnuView">视图(_V)</Control>
+		</Form>
+		<Form ID="RegisterTabView">
+			<Control ID="colAddress">地址</Control>
+			<Control ID="colName">名称</Control>
+			<Control ID="colValue">数值</Control>
+		</Form>
+		<Form ID="BreakpointEditWindow">
+			<Control ID="wndTitle">编辑断点…</Control>
+			<Control ID="chkBreakOnRead">读取</Control>
+			<Control ID="chkBreakOnWrite">写入</Control>
+			<Control ID="chkBreakOnExec">执行</Control>
+			<Control ID="lblBreakpointType">内存类型：</Control>
+			<Control ID="lblBreakOn">中断于：</Control>
+			<Control ID="lblAddress">地址：</Control>
+			<Control ID="lblCondition">条件：</Control>
+			<Control ID="chkEnableForbid">已启用</Control>
+		</Form>
+		<Form ID="FirmwareSelect">
+			<Control ID="btnSelect">选择…</Control>
+			<Control ID="btnDelete">删除文件</Control>
+		</Form>
+	</Forms>
+	<Messages>
+		<Message ID="LastSession">上次会话</Message>
+		<Message ID="AutoSave">自动保存</Message>
+		<Message ID="SlotNumber">存档位 #{0}</Message>
+		<Message ID="LoadStateDialog">读取存档</Message>
+		<Message ID="SaveStateDialog">保存存档</Message>
+		<Message ID="LoadFromFile">从文件读取…</Message>
+		<Message ID="SaveToFile">保存到文件…</Message>
+		<Message ID="VideoLayerDisabled">已禁用：{0}</Message>
+		<Message ID="VideoLayerEnabled">已启用：{0}</Message>
+		<Message ID="AllLayersEnabled">已启用所有背景/精灵图层。</Message>
+		<Message ID="PromptSaveChanges">是否保存更改？</Message>
+		<Message ID="PromptKeepChanges">是否保留更改？</Message>
+		<Message ID="MovieExportEntireSegment">导出整个片段</Message>
+		<Message ID="MovieExportSpecificRange">导出指定范围…</Message>
+		<Message ID="MovieSaveError">保存影片文件时发生错误。</Message>
+		<Message ID="FileSaveError">保存文件时发生错误。</Message>
+		<Message ID="SetKeyHint">按下键盘上的任意按键以设置新的按键绑定。</Message>
+		<Message ID="SetKeyMouseHint">按下键盘、手柄或鼠标上的任意按键以设置新的按键绑定。</Message>
+		<Message ID="MouseModeEnabled">鼠标控制已启用；暂停即可释放光标</Message>
+		<Message ID="RightClickToClearBinding">右键单击以清除绑定</Message>
+		<Message ID="EmptyState">&lt;空&gt;</Message>
+		<Message ID="FileNotFound">找不到文件：{0}</Message>
+		<Message ID="InvalidArgument">无效参数：{0}</Message>
+		<Message ID="MesenUpToDate">当前已是最新版本的 Mesen。</Message>
+		<Message ID="ConfirmReset">确定要重置吗？</Message>
+		<Message ID="ConfirmPowerCycle">确定要重新通电吗？</Message>
+		<Message ID="ConfirmReloadRom">确定要从磁盘重新加载 ROM 吗？</Message>
+		<Message ID="ConfirmPowerOff">确定要关机吗？</Message>
+		<Message ID="ConfirmExit">确定要退出吗？</Message>
+		<Message ID="Player">玩家</Message>
+		<Message ID="ViewInAction">在 {0} 中查看</Message>
+		<Message ID="btnOK">确定</Message>
+		<Message ID="btnCancel">取消</Message>
+		<Message ID="btnYes">是</Message>
+		<Message ID="btnNo">否</Message>
+		<Message ID="None">无</Message>
+		<Message ID="LabelNameInUse">已存在同名标签。</Message>
+		<Message ID="InvalidLabel">标签名称不符合命名规则。</Message>
+		<Message ID="LabelOrCommentRequired">必须指定标签或注释。</Message>
+	</Messages>
+	<Enums>
+		<Enum ID="EmulatorShortcut">
+			<Value ID="Pause">暂停</Value>
+		</Enum>
+		<Enum ID="ControllerType">
+			<Value ID="None">无</Value>
+			<Value ID="SnesController">SNES 手柄</Value>
+			<Value ID="SnesMouse">SNES 鼠标</Value>
+			<Value ID="SnesMouse">SNES 鼠标</Value>
+			<Value ID="FourScore">Four Score（NES）</Value>
+		</Enum>
+		<Enum ID="DspInterpolationType">
+			<Value ID="None">无</Value>
+		</Enum>
+		<Enum ID="SnesSuperScopeButtons">
+			<Value ID="Pause">暂停</Value>
+		</Enum>
+		<Enum ID="NesSuborKeyboardButtons">
+			<Value ID="Pause">暂停</Value>
+		</Enum>
+		<Enum ID="GameSelectionMode">
+			<Value ID="Disabled">已禁用</Value>
+		</Enum>
+		<Enum ID="ConsoleRegion">
+			<Value ID="Auto">自动</Value>
+		</Enum>
+		<Enum ID="VideoAspectRatio">
+			<Value ID="NoStretching">不拉伸（默认）</Value>
+			<Value ID="Standard">标准（4:3）</Value>
+			<Value ID="Widescreen">宽屏（16:9）</Value>
+		</Enum>
+		<Enum ID="FullscreenResolution">
+			<Value ID="Default">默认</Value>
+		</Enum>
+		<Enum ID="ScreenRotation">
+			<Value ID="None">无</Value>
+		</Enum>
+		<Enum ID="VideoFilterType">
+			<Value ID="None">无</Value>
+		</Enum>
+		<Enum ID="MesenTheme">
+			<Value ID="Light">浅色</Value>
+			<Value ID="Dark">深色</Value>
+		</Enum>
+		<Enum ID="RamState">
+			<Value ID="Random">随机值</Value>
+			<Value ID="AllZeros">全部为 0</Value>
+			<Value ID="AllOnes">全部为 1</Value>
+		</Enum>
+		<Enum ID="FontAntialiasing">
+			<Value ID="Disabled">已禁用</Value>
+		</Enum>
+		<Enum ID="RecordMovieFrom">
+			<Value ID="StartWithoutSaveData">开机</Value>
+			<Value ID="CurrentState">当前状态</Value>
+		</Enum>
+		<Enum ID="AudioBackendType">
+			<Value ID="Default">默认</Value>
+			<Value ID="Wasapi">WASAPI（默认）</Value>
+			<Value ID="DirectSound">DirectSound（旧版）</Value>
+		</Enum>
+		<Enum ID="StereoFilter">
+			<Value ID="None">无</Value>
+		</Enum>
+		<Enum ID="GbLocalLinkOutputOption">
+			<Value ID="Both">两者</Value>
+			<Value ID="MainSystemOnly">仅玩家 1</Value>
+			<Value ID="SubSystemOnly">仅玩家 2</Value>
+		</Enum>
+		<Enum ID="VsDualOutputOption">
+			<Value ID="Both">两者</Value>
+		</Enum>
+		<Enum ID="GbaSaveType">
+			<Value ID="AutoDetect">自动检测</Value>
+			<Value ID="None">无</Value>
+			<Value ID="Sram">SRAM</Value>
+			<Value ID="Eeprom512">EEPROM（512 字节）</Value>
+			<Value ID="Eeprom8192">EEPROM（8 KB）</Value>
+			<Value ID="Flash64">闪存（64 KB）</Value>
+			<Value ID="Flash128">闪存（128 KB）</Value>
+		</Enum>
+		<Enum ID="GbaRtcType">
+			<Value ID="AutoDetect">自动检测</Value>
+			<Value ID="Enabled">已启用</Value>
+			<Value ID="Disabled">已禁用</Value>
+		</Enum>
+		<Enum ID="GbaDisassemblyMode">
+			<Value ID="Default">自动</Value>
+		</Enum>
+		<Enum ID="MemorySizes">
+			<Value ID="None">无</Value>
+		</Enum>
+		<Enum ID="FrameTiming">
+			<Value ID="Ntsc">NTSC</Value>
+			<Value ID="Pal">PAL</Value>
+		</Enum>
+		<Enum ID="MirroringType">
+			<Value ID="Horizontal">水平</Value>
+			<Value ID="Vertical">垂直</Value>
+			<Value ID="FourScreens">四屏</Value>
+		</Enum>
+		<Enum ID="VsSystemType">
+			<Value ID="Default">默认</Value>
+		</Enum>
+		<Enum ID="GameInputType">
+			<Value ID="StandardControllers">标准控制器</Value>
+			<Value ID="FourScore">Four Score（NES）</Value>
+		</Enum>
+		<Enum ID="FirmwareType">
+			<Value ID="WonderSwan">WonderSwan</Value>
+			<Value ID="WonderSwanColor">WonderSwan Color</Value>
+		</Enum>
+		<Enum ID="CpuType">
+			<Value ID="Gameboy">Game Boy</Value>
+		</Enum>
+		<Enum ID="MemoryType">
+			<Value ID="None">无</Value>
+		</Enum>
+		<Enum ID="GameboyModel">
+			<Value ID="Gameboy">Game Boy</Value>
+			<Value ID="GameboyColor">Game Boy Color</Value>
+			<Value ID="SuperGameboy">Super Game Boy</Value>
+		</Enum>
+		<Enum ID="WsModel">
+			<Value ID="Auto">自动</Value>
+			<Value ID="Monochrome">WonderSwan</Value>
+			<Value ID="Color">WonderSwan Color</Value>
+		</Enum>
+		<Enum ID="TileLayout">
+			<Value ID="Normal">普通</Value>
+			<Value ID="Vertical">垂直</Value>
+		</Enum>
+		<Enum ID="TileFilter">
+			<Value ID="None">无</Value>
+		</Enum>
+		<Enum ID="TilemapBackground">
+			<Value ID="Default">默认</Value>
+			<Value ID="Transparent">透明</Value>
+			<Value ID="Black">黑色</Value>
+			<Value ID="White">白色</Value>
+			<Value ID="Magenta">洋红色</Value>
+		</Enum>
+		<Enum ID="TileBackground">
+			<Value ID="Transparent">透明</Value>
+			<Value ID="Black">黑色</Value>
+			<Value ID="White">白色</Value>
+			<Value ID="Magenta">洋红色</Value>
+		</Enum>
+		<Enum ID="SpriteBackground">
+			<Value ID="Transparent">透明</Value>
+			<Value ID="Black">黑色</Value>
+			<Value ID="White">白色</Value>
+			<Value ID="Magenta">洋红色</Value>
+		</Enum>
+		<Enum ID="TilemapDisplayMode">
+			<Value ID="Default">默认</Value>
+			<Value ID="Grayscale">灰度</Value>
+		</Enum>
+		<Enum ID="TilemapMirroring">
+			<Value ID="None">无</Value>
+			<Value ID="Horizontal">水平</Value>
+			<Value ID="Vertical">垂直</Value>
+			<Value ID="FourScreens">四屏</Value>
+		</Enum>
+		<Enum ID="TilemapHighlightMode">
+			<Value ID="Changes">变化</Value>
+			<Value ID="Writes">写入</Value>
+		</Enum>
+		<Enum ID="StatusFlagFormat">
+			<Value ID="Hexadecimal">十六进制</Value>
+		</Enum>
+		<Enum ID="BreakSource">
+			<Value ID="Breakpoint">断点</Value>
+			<Value ID="Pause">暂停</Value>
+			<Value ID="CpuStep">CPU 单步</Value>
+			<Value ID="PpuStep">PPU 单步</Value>
+			<Value ID="InternalOperation">暂停</Value>
+		</Enum>
+		<Enum ID="MemoryOperationType">
+			<Value ID="Read">读取</Value>
+			<Value ID="Write">写入</Value>
+			<Value ID="ExecOpCode">执行</Value>
+			<Value ID="ExecOperand">执行</Value>
+			<Value ID="DmaRead">DMA 读取</Value>
+			<Value ID="DmaWrite">DMA 写入</Value>
+		</Enum>
+		<Enum ID="HighlightFadeSpeed">
+			<Value ID="NoFade">不渐隐</Value>
+			<Value ID="Slow">慢</Value>
+			<Value ID="Normal">普通</Value>
+			<Value ID="Fast">快</Value>
+		</Enum>
+		<Enum ID="SearchDataType">
+			<Value ID="Hex">十六进制</Value>
+			<Value ID="String">字符串</Value>
+			<Value ID="Integer">整数</Value>
+		</Enum>
+		<Enum ID="CodeDisplayMode">
+			<Value ID="Hide">隐藏</Value>
+			<Value ID="Show">显示</Value>
+		</Enum>
+		<Enum ID="AddressDisplayType">
+			<Value ID="CpuAddress">CPU 地址</Value>
+			<Value ID="AbsAddress">ROM 地址</Value>
+			<Value ID="Both">两者</Value>
+			<Value ID="BothCompact">两者（紧凑）</Value>
+		</Enum>
+		<Enum ID="MemorySearchCompareTo">
+			<Value ID="PreviousSearchValue">上一次的值</Value>
+			<Value ID="SpecificValue">指定数值：</Value>
+			<Value ID="SpecificAddress">指定地址：</Value>
+		</Enum>
+		<Enum ID="MemorySearchOperator">
+			<Value ID="Equal">等于</Value>
+			<Value ID="NotEqual">不等于</Value>
+			<Value ID="LessThan">小于</Value>
+			<Value ID="GreaterThan">大于</Value>
+			<Value ID="LessThanOrEqual">小于或等于</Value>
+			<Value ID="GreaterThanOrEqual">大于或等于</Value>
+		</Enum>
+		<Enum ID="DebugSpritePriority">
+			<Value ID="Foreground">前景</Value>
+			<Value ID="Background">背景</Value>
+		</Enum>
+		<Enum ID="GbaBgStereoMode">
+			<Value ID="Disabled">已禁用</Value>
+		</Enum>
+		<Enum ID="DebugSpriteMode">
+			<Value ID="Normal">普通</Value>
+		</Enum>
+		<Enum ID="SpriteVisibility">
+			<Value ID="Visible">可见</Value>
+			<Value ID="Offscreen">屏幕外</Value>
+			<Value ID="Disabled">已禁用</Value>
+		</Enum>
+		<Enum ID="DocEntryCategory">
+			<Value ID="Callbacks">回调</Value>
+			<Value ID="Drawing">绘图</Value>
+			<Value ID="Emulation">模拟</Value>
+			<Value ID="Input">输入</Value>
+			<Value ID="Logging">日志</Value>
+			<Value ID="MemoryAccess">内存访问</Value>
+			<Value ID="Miscellaneous">其他</Value>
+			<Value ID="Enums">枚举</Value>
+		</Enum>
+		<Enum ID="DebugEventType">
+			<Value ID="Breakpoint">断点</Value>
+		</Enum>
+		<Enum ID="AddrMode">
+			<Value ID="None">无</Value>
+		</Enum>
+		<Enum ID="ActionType">
+			<Value ID="Emulation">模拟</Value>
+			<Value ID="Input">输入</Value>
+			<Value ID="Gameboy">Game Boy</Value>
+			<Value ID="Ws">WonderSwan</Value>
+			<Value ID="Pause">暂停</Value>
+		</Enum>
+	</Enums>
+</Resources>

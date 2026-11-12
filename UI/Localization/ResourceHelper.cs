@@ -1,7 +1,8 @@
-﻿using Mesen.Interop;
+using Mesen.Interop;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Xml;
@@ -54,7 +55,48 @@ namespace Mesen.Localization
 						}
 					}
 				}
+
+				// Apply the optional Chinese overlay after loading English, so untranslated IDs keep English text.
+				// MESEN_LANGUAGE can force a language (for example, "zh-CN" or "en").
+				string language = Environment.GetEnvironmentVariable("MESEN_LANGUAGE") ?? CultureInfo.CurrentUICulture.Name;
+				if(language.StartsWith("zh", StringComparison.OrdinalIgnoreCase)) {
+					string translationPath = Path.Combine(AppContext.BaseDirectory, "Localization", "resources.zh-CN.xml");
+					if(File.Exists(translationPath)) {
+						XmlDocument translation = new XmlDocument();
+						translation.Load(translationPath);
+						LoadTranslationOverlay(translation, enumTypes);
+					}
+				}
+
+
 			} catch {
+			}
+		}
+
+		private static void LoadTranslationOverlay(XmlDocument translation, Dictionary<string, Type> enumTypes)
+		{
+			foreach(XmlNode node in translation.SelectNodes("/Resources/Messages/Message")!) {
+				string id = node.Attributes!["ID"]!.Value;
+				if(!string.IsNullOrWhiteSpace(node.InnerText)) _messageCache[id] = node.InnerText;
+			}
+
+			foreach(XmlNode node in translation.SelectNodes("/Resources/Enums/Enum")!) {
+				string enumName = node.Attributes!["ID"]!.Value;
+				if(!enumTypes.TryGetValue(enumName, out Type? enumType)) continue;
+				foreach(XmlNode enumNode in node.ChildNodes) {
+					if(Enum.TryParse(enumType, enumNode.Attributes!["ID"]!.Value, out object? value) && !string.IsNullOrWhiteSpace(enumNode.InnerText)) {
+						_enumLabelCache[(Enum)value!] = enumNode.InnerText;
+					}
+				}
+			}
+
+			foreach(XmlNode node in translation.SelectNodes("/Resources/Forms/Form")!) {
+				string viewName = node.Attributes!["ID"]!.Value;
+				foreach(XmlNode formNode in node.ChildNodes) {
+					if(formNode is XmlElement elem && !string.IsNullOrWhiteSpace(elem.InnerText)) {
+						_viewLabelCache[viewName + "_" + elem.Attributes!["ID"]!.Value] = elem.InnerText;
+					}
+				}
 			}
 		}
 
