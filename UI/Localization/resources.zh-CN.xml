@@ -1096,6 +1096,11 @@ Windows：
 			<Control ID="chkSingleBreakpointPerInstruction">每条指令仅中断一次</Control>
 			<Control ID="chkSnesIgnoreDspReadWrites">忽略 DSP 读写</Control>
 			<Control ID="chkSnesIgnoreDspReadWritesHint">调试器将忽略 DSP 对 SPC RAM 的读写。DSP 执行的读写不会触发断点，也不会计入访问次数等统计。（这可以略微提高调试性能。）</Control>
+		
+			<Control ID="chkBreakOnBrk">BRK</Control>
+			<Control ID="chkBreakOnCop">COP</Control>
+			<Control ID="chkBreakOnWdm">WDM</Control>
+			<Control ID="chkBreakOnStp">STP</Control>
 		</Form>
 		<Form ID="MemoryToolsWindow">
 			<Control ID="wndTitle">内存查看器</Control>
@@ -1241,6 +1246,19 @@ Windows：
 			<Control ID="tabShortcuts">快捷键</Control>
 			<Control ID="tabShared">共享</Control>
 			<Control ID="tabMisc">其他</Control>
+		
+			<Control ID="btnOK">确定</Control>
+			<Control ID="btnCancel">取消</Control>
+			<Control ID="tabDebugger">调试器</Control>
+			<Control ID="chkAutoResetCdl">ROM 更改时重置 CDL</Control>
+			<Control ID="chkDisableDefaultLabels">禁用默认标签</Control>
+			<Control ID="lblDisassemblySettings">反汇编设置</Control>
+			<Control ID="chkKeepActiveStatementInCenter">将当前语句保持在中央</Control>
+			<Control ID="lblCopyCodeSettings">复制所选代码的设置</Control>
+			<Control ID="chkCopyAddresses">复制地址</Control>
+			<Control ID="chkCopyByteCode">复制机器码</Control>
+			<Control ID="chkCopyComments">复制注释</Control>
+			<Control ID="chkCopyBlockHeaders">复制代码块标题</Control>
 		</Form>
 		<Form ID="WatchWindow">
 			<Control ID="wndTitle">监视窗口</Control>
@@ -1879,12 +1897,58 @@ Windows：
 		</Enum>
 		<Enum ID="FullscreenResolution">
 			<Value ID="Default">默认</Value>
+		
+			<Value ID="_3840x2160">3840×2160</Value>
+			<Value ID="_2560x1440">2560×1440</Value>
+			<Value ID="_2160x1200">2160×1200</Value>
+			<Value ID="_1920x1440">1920×1440</Value>
+			<Value ID="_1920x1200">1920×1200</Value>
+			<Value ID="_1920x1080">1920×1080</Value>
+			<Value ID="_1680x1050">1680×1050</Value>
+			<Value ID="_1600x1200">1600×1200</Value>
+			<Value ID="_1600x1024">1600×1024</Value>
+			<Value ID="_1600x900">1600×900</Value>
+			<Value ID="_1366x768">1366×768</Value>
+			<Value ID="_1360x768">1360×768</Value>
+			<Value ID="_1280x1024">1280×1024</Value>
+			<Value ID="_1280x960">1280×960</Value>
+			<Value ID="_1280x800">1280×800</Value>
+			<Value ID="_1280x768">1280×768</Value>
+			<Value ID="_1280x720">1280×720</Value>
+			<Value ID="_1152x864">1152×864</Value>
+			<Value ID="_1024x768">1024×768</Value>
+			<Value ID="_800x600">800×600</Value>
+			<Value ID="_640x480">640×480</Value>
 		</Enum>
 		<Enum ID="ScreenRotation">
 			<Value ID="None">无</Value>
 		</Enum>
 		<Enum ID="VideoFilterType">
 			<Value ID="None">无</Value>
+		
+			<Value ID="NtscBlargg">NTSC 滤镜（blargg）</Value>
+			<Value ID="NtscBisqwit">NTSC 滤镜（Bisqwit，仅 NES）</Value>
+			<Value ID="LcdGrid">LCD 网格</Value>
+			<Value ID="xBRZ2x">xBRZ 2 倍</Value>
+			<Value ID="xBRZ3x">xBRZ 3 倍</Value>
+			<Value ID="xBRZ4x">xBRZ 4 倍</Value>
+			<Value ID="xBRZ5x">xBRZ 5 倍</Value>
+			<Value ID="xBRZ6x">xBRZ 6 倍</Value>
+			<Value ID="HQ2x">HQ 2 倍</Value>
+			<Value ID="HQ3x">HQ 3 倍</Value>
+			<Value ID="HQ4x">HQ 4 倍</Value>
+			<Value ID="Scale2x">Scale 2 倍</Value>
+			<Value ID="Scale3x">Scale 3 倍</Value>
+			<Value ID="Scale4x">Scale 4 倍</Value>
+			<Value ID="_2xSai">2xSai</Value>
+			<Value ID="Super2xSai">Super2xSai</Value>
+			<Value ID="SuperEagle">SuperEagle</Value>
+			<Value ID="Prescale2x">预缩放 2 倍</Value>
+			<Value ID="Prescale3x">预缩放 3 倍</Value>
+			<Value ID="Prescale4x">预缩放 4 倍</Value>
+			<Value ID="Prescale6x">预缩放 6 倍</Value>
+			<Value ID="Prescale8x">预缩放 8 倍</Value>
+			<Value ID="Prescale10x">预缩放 10 倍</Value>
 		</Enum>
 		<Enum ID="MesenTheme">
 			<Value ID="Light">浅色</Value>
@@ -2037,9 +2101,50 @@ Windows：
 		<Enum ID="FirmwareType">
 			<Value ID="WonderSwan">WonderSwan</Value>
 			<Value ID="WonderSwanColor">WonderSwan Color</Value>
+		
+			<Value ID="CX4">CX4</Value>
+			<Value ID="DSP1">DSP-1</Value>
+			<Value ID="DSP1B">DSP-1B</Value>
+			<Value ID="DSP2">DSP-2</Value>
+			<Value ID="DSP3">DSP-3</Value>
+			<Value ID="DSP4">DSP-4</Value>
+			<Value ID="ST010">ST010</Value>
+			<Value ID="ST011">ST011</Value>
+			<Value ID="ST018">ST018</Value>
+			<Value ID="SufamiTurbo">Sufami Turbo</Value>
+			<Value ID="Satellaview">Satellaview（BS-X）</Value>
+			<Value ID="Gameboy">Game Boy CPU</Value>
+			<Value ID="GameboyColor">Game Boy Color CPU</Value>
+			<Value ID="GameboyAdvance">Game Boy Advance 启动 ROM</Value>
+			<Value ID="Sgb1GameboyCpu">SGB1 - Game Boy CPU</Value>
+			<Value ID="Sgb2GameboyCpu">SGB2 - Game Boy CPU</Value>
+			<Value ID="SGB1">SGB1</Value>
+			<Value ID="SGB2">SGB2</Value>
+			<Value ID="FDS">Famicom 磁碟机系统</Value>
+			<Value ID="StudyBox">Study Box 学习机</Value>
+			<Value ID="PceSuperCd">Super CD-ROM²</Value>
+			<Value ID="PceGamesExpress">Games Express 卡</Value>
+			<Value ID="ColecoVision">ColecoVision</Value>
+			<Value ID="SwanCrystal">SwanCrystal</Value>
+			<Value ID="Ymf288AdpcmRom">YFM288 ADPCM ROM（EPSM）</Value>
+			<Value ID="SmsBootRom">Master System - 启动 ROM</Value>
+			<Value ID="GgBootRom">Game Gear - 启动 ROM</Value>
 		</Enum>
 		<Enum ID="CpuType">
 			<Value ID="Gameboy">Game Boy</Value>
+		
+			<Value ID="Snes">SNES（65816）</Value>
+			<Value ID="Spc">SPC</Value>
+			<Value ID="NecDsp">DSP-n</Value>
+			<Value ID="Sa1">SA-1</Value>
+			<Value ID="Gsu">GSU</Value>
+			<Value ID="Cx4">CX4</Value>
+			<Value ID="St018">ST018</Value>
+			<Value ID="Nes">NES</Value>
+			<Value ID="Pce">PC Engine</Value>
+			<Value ID="Sms">SMS</Value>
+			<Value ID="Gba">GBA</Value>
+			<Value ID="Ws">WS</Value>
 		</Enum>
 		<Enum ID="MemoryType">
 			<Value ID="None">无</Value>
@@ -2196,6 +2301,39 @@ Windows：
 			<Value ID="CpuStep">CPU 单步</Value>
 			<Value ID="PpuStep">PPU 单步</Value>
 			<Value ID="InternalOperation">暂停</Value>
+		
+			<Value ID="BreakOnBrk">BRK 指令</Value>
+			<Value ID="BreakOnCop">COP 指令</Value>
+			<Value ID="BreakOnWdm">WDM 指令</Value>
+			<Value ID="BreakOnStp">STP 指令</Value>
+			<Value ID="BreakOnUninitMemoryRead">读取未初始化内存</Value>
+			<Value ID="GbInvalidOamAccess">无效的 OAM 访问</Value>
+			<Value ID="GbInvalidVramAccess">无效的 VRAM 访问</Value>
+			<Value ID="GbDisableLcdOutsideVblank">在垂直消隐期之外关闭 LCD</Value>
+			<Value ID="GbInvalidOpCode">无效指令</Value>
+			<Value ID="GbNopLoad">LD B, B（NOP）</Value>
+			<Value ID="GbOamCorruption">触发 OAM 损坏错误</Value>
+			<Value ID="Irq">IRQ 中断</Value>
+			<Value ID="Nmi">NMI 中断</Value>
+			<Value ID="NesBreakOnDecayedOamRead">读取衰减的 OAM</Value>
+			<Value ID="NesBreakOnPpu2000ScrollGlitch">$2000/5/6 滚动异常</Value>
+			<Value ID="NesBreakOnPpu2006ScrollGlitch">$2006 滚动异常</Value>
+			<Value ID="BreakOnUnofficialOpCode">非官方操作码</Value>
+			<Value ID="BreakOnUnstableOpCode">不稳定操作码</Value>
+			<Value ID="NesBusConflict">总线冲突</Value>
+			<Value ID="NesBreakOnCpuCrash">CPU 崩溃</Value>
+			<Value ID="NesBreakOnExtOutputMode">PPU EXT 输出模式</Value>
+			<Value ID="NesInvalidVramAccess">无效的 VRAM 访问</Value>
+			<Value ID="NesInvalidOamWrite">无效的 OAM 访问</Value>
+			<Value ID="NesDmaInputRead">DMA 控制器读取</Value>
+			<Value ID="PceBreakOnInvalidVramAddress">无效的 VRAM 地址（>= $8000）</Value>
+			<Value ID="SmsNopLoad">LD B, B（NOP）</Value>
+			<Value ID="GbaNopLoad">MOV R11, R11（NOP）</Value>
+			<Value ID="GbaInvalidOpCode">无效指令</Value>
+			<Value ID="GbaUnalignedMemoryAccess">未对齐的内存访问</Value>
+			<Value ID="SnesReadDuringAutoJoy">自动读取期间读取控制器</Value>
+			<Value ID="SnesInvalidPpuAccess">无效的 PPU 内存访问</Value>
+			<Value ID="BreakOnUndefinedOpCode">未定义操作码</Value>
 		</Enum>
 		<Enum ID="MemoryOperationType">
 			<Value ID="Read">读取</Value>
@@ -2269,6 +2407,52 @@ Windows：
 		</Enum>
 		<Enum ID="AddrMode">
 			<Value ID="None">无</Value>
+		
+			<Value ID="Acc">A - 累加器</Value>
+			<Value ID="Imp">隐含寻址</Value>
+			<Value ID="Imm">#i - 立即数</Value>
+			<Value ID="Rel">r - 相对寻址</Value>
+			<Value ID="Zero">z - 零页寻址</Value>
+			<Value ID="Abs">a - 绝对寻址</Value>
+			<Value ID="ZeroX">z,x - 零页 X 索引</Value>
+			<Value ID="ZeroY">z,y - 零页 Y 索引</Value>
+			<Value ID="Ind">(a) - 绝对间接寻址</Value>
+			<Value ID="IndX">(z,x) - 零页索引间接寻址</Value>
+			<Value ID="IndY">(z),y - 零页间接索引寻址</Value>
+			<Value ID="AbsX">a,x - 绝对 X 索引</Value>
+			<Value ID="AbsY">a,y - 绝对 Y 索引</Value>
+			<Value ID="AbsIdxXInd">(a,x) - 绝对索引间接寻址</Value>
+			<Value ID="AbsIdxX">a,x - 绝对 X 索引</Value>
+			<Value ID="AbsIdxY">a,y - 绝对 Y 索引</Value>
+			<Value ID="AbsLng">al - 长绝对寻址</Value>
+			<Value ID="AbsLngIdxX">al,x - 长绝对 X 索引</Value>
+			<Value ID="AbsIndLng">(al) - 长绝对间接寻址</Value>
+			<Value ID="AbsInd">(a) - 绝对间接寻址</Value>
+			<Value ID="BlkMov">块移动</Value>
+			<Value ID="Dir">d - 直接寻址</Value>
+			<Value ID="DirIdxX">d,x - 直接 X 索引</Value>
+			<Value ID="DirInd">(d) - 直接间接寻址</Value>
+			<Value ID="DirIndLng">[d] - 直接长间接寻址</Value>
+			<Value ID="DirIndIdxY">(d),y - 直接间接 Y 索引</Value>
+			<Value ID="DirIdxIndX">(d,x) - 直接索引间接寻址</Value>
+			<Value ID="DirIdxY">d,y - 直接 Y 索引</Value>
+			<Value ID="DirIndLngIdxY">[d],y - 直接长间接 Y 索引</Value>
+			<Value ID="Imm8">#i8 - 立即数（8 位）</Value>
+			<Value ID="Imm16">#i16 - 立即数（16 位）</Value>
+			<Value ID="ImmX">#ix - X 立即数（可变长度）</Value>
+			<Value ID="ImmM">#im - M 立即数（可变长度）</Value>
+			<Value ID="RelLng">rl - 长相对寻址</Value>
+			<Value ID="Stk">s - 堆栈</Value>
+			<Value ID="StkRel">d,s - 堆栈相对寻址</Value>
+			<Value ID="StkRelIndIdxY">(d,s),y - 堆栈相对间接索引</Value>
+			<Value ID="AbxXInd">(a,x) - 绝对索引间接寻址</Value>
+			<Value ID="Block">s,d,l - 块传送</Value>
+			<Value ID="ImZero">#i,z - 立即数零页寻址</Value>
+			<Value ID="ImZeroX">#i,z,x - 立即数零页索引</Value>
+			<Value ID="ImAbs">#i,a - 立即数绝对寻址</Value>
+			<Value ID="ImAbsX">#i,a,x - 立即数绝对索引</Value>
+			<Value ID="ZInd">(z) - 零页间接寻址</Value>
+			<Value ID="ZeroRel">z,r - 零页相对寻址</Value>
 		</Enum>
 		<Enum ID="ActionType">
 			<Value ID="Emulation">模拟</Value>
@@ -2410,6 +2594,20 @@ Windows：
 			<Value ID="ReservedD">保留（$D）</Value>
 			<Value ID="ReservedE">保留（$E）</Value>
 			<Value ID="ReservedF">保留（$F）</Value>
+		
+			<Value ID="RP2C03B">RP2C03B</Value>
+			<Value ID="RP2C03G">RP2C03G</Value>
+			<Value ID="RP2C040001">RP2C04-0001</Value>
+			<Value ID="RP2C040002">RP2C04-0002</Value>
+			<Value ID="RP2C040003">RP2C04-0003</Value>
+			<Value ID="RP2C040004">RP2C04-0004</Value>
+			<Value ID="RC2C03B">RC2C03B</Value>
+			<Value ID="RC2C03C">RC2C03C</Value>
+			<Value ID="RC2C0501">RC2C05-01</Value>
+			<Value ID="RC2C0502">RC2C05-02</Value>
+			<Value ID="RC2C0503">RC2C05-03</Value>
+			<Value ID="RC2C0504">RC2C05-04</Value>
+			<Value ID="RC2C0505">RC2C05-05</Value>
 		</Enum>
 		<Enum ID="WsAudioMode">
 			<Value ID="Headphones">耳机（推荐）</Value>
@@ -3108,6 +3306,20 @@ Windows：
 		</Enum>
 			<Enum ID="NesOekakidsButtons">
 			<Value ID="Click">Click</Value>
+		</Enum>
+			<Enum ID="NavType">
+			<Value ID="PrevCode">导航至：上一个代码块</Value>
+			<Value ID="NextCode">导航至：下一个代码块</Value>
+			<Value ID="PrevData">导航至：上一个数据块</Value>
+			<Value ID="NextData">导航至：下一个数据块</Value>
+			<Value ID="PrevUnknown">导航至：上一个未识别块</Value>
+			<Value ID="NextUnknown">导航至：下一个未识别块</Value>
+			<Value ID="PrevRead">导航至：上一个读取块</Value>
+			<Value ID="NextRead">导航至：下一个读取块</Value>
+			<Value ID="PrevWrite">导航至：上一个写入块</Value>
+			<Value ID="NextWrite">导航至：下一个写入块</Value>
+			<Value ID="PrevExec">导航至：上一个执行块</Value>
+			<Value ID="NextExec">导航至：下一个执行块</Value>
 		</Enum>
 	</Enums>
 </Resources>
