@@ -1502,6 +1502,37 @@ Windows：
 			<Value ID="LoadTape">从文件加载磁带</Value>
 			<Value ID="RecordTape">开始将磁带录制到文件</Value>
 			<Value ID="StopRecordTape">停止录制磁带</Value>
+		
+			<Value ID="SaveStateSlot1">即时存档 - 槽位 1</Value>
+			<Value ID="SaveStateSlot2">即时存档 - 槽位 2</Value>
+			<Value ID="SaveStateSlot3">即时存档 - 槽位 3</Value>
+			<Value ID="SaveStateSlot4">即时存档 - 槽位 4</Value>
+			<Value ID="SaveStateSlot5">即时存档 - 槽位 5</Value>
+			<Value ID="SaveStateSlot6">即时存档 - 槽位 6</Value>
+			<Value ID="SaveStateSlot7">即时存档 - 槽位 7</Value>
+			<Value ID="SaveStateSlot8">即时存档 - 槽位 8</Value>
+			<Value ID="SaveStateSlot9">即时存档 - 槽位 9</Value>
+			<Value ID="SaveStateSlot10">即时存档 - 槽位 10</Value>
+			<Value ID="LoadStateSlot1">读取即时存档 - 槽位 1</Value>
+			<Value ID="LoadStateSlot2">读取即时存档 - 槽位 2</Value>
+			<Value ID="LoadStateSlot3">读取即时存档 - 槽位 3</Value>
+			<Value ID="LoadStateSlot4">读取即时存档 - 槽位 4</Value>
+			<Value ID="LoadStateSlot5">读取即时存档 - 槽位 5</Value>
+			<Value ID="LoadStateSlot6">读取即时存档 - 槽位 6</Value>
+			<Value ID="LoadStateSlot7">读取即时存档 - 槽位 7</Value>
+			<Value ID="LoadStateSlot8">读取即时存档 - 槽位 8</Value>
+			<Value ID="LoadStateSlot9">读取即时存档 - 槽位 9</Value>
+			<Value ID="LoadStateSlot10">读取即时存档 - 槽位 10</Value>
+			<Value ID="SelectSaveSlot1">选择即时存档槽 1</Value>
+			<Value ID="SelectSaveSlot2">选择即时存档槽 2</Value>
+			<Value ID="SelectSaveSlot3">选择即时存档槽 3</Value>
+			<Value ID="SelectSaveSlot4">选择即时存档槽 4</Value>
+			<Value ID="SelectSaveSlot5">选择即时存档槽 5</Value>
+			<Value ID="SelectSaveSlot6">选择即时存档槽 6</Value>
+			<Value ID="SelectSaveSlot7">选择即时存档槽 7</Value>
+			<Value ID="SelectSaveSlot8">选择即时存档槽 8</Value>
+			<Value ID="SelectSaveSlot9">选择即时存档槽 9</Value>
+			<Value ID="SelectSaveSlot10">选择即时存档槽 10</Value>
 		</Enum>
 		<Enum ID="ControllerType">
 			<Value ID="None">无</Value>
