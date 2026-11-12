@@ -52,7 +52,14 @@ jobs:
 
       - name: Publish Mesen
         run: dotnet publish --no-restore -c Release -p:PublishAot="${{ matrix.platform.aot }}" -p:SelfContained="${{ matrix.platform.aot }}" -p:PublishSingleFile="${{ matrix.platform.singleFile }}" -p:OptimizeUi="true" -p:Platform="Any CPU" -p:TargetFramework="${{ matrix.platform.targetframework }}" -r win-x64 Mesen.sln /p:PublishProfile=UI\Properties\PublishProfiles\Release.pubxml
-
+      - name: Create Chinese launcher
+        shell: pwsh
+        run: |
+          @'
+          @echo off
+          set "MESEN_LANGUAGE=zh-CN"
+          "%~dp0Mesen.exe" %*
+          '@ | Set-Content -Path "build/TmpReleaseBuild/Mesen-简体中文.bat" -Encoding ascii
       - name: Upload Mesen
         uses: actions/upload-artifact@v7
         if: github.event_name != 'pull_request'
@@ -60,8 +67,8 @@ jobs:
           name: Mesen (Windows - ${{ matrix.platform.targetframework }}${{ matrix.platform.aotString }})
           path: |
             build/TmpReleaseBuild/Mesen.exe
-
-
+            build/TmpReleaseBuild/Mesen-简体中文.bat
+            build/TmpReleaseBuild/Localization/resources.zh-CN.xml
   linux:
     if: ${{ (github.event_name == 'push' || github.event.pull_request.head.repo.full_name != github.repository) }}
     strategy:
