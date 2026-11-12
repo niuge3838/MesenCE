@@ -214,6 +214,11 @@ Windows：
 		</Form>
 		<Form ID="VideoConfigOverrideView">
 			<Control ID="lblCustomRatio">自定义比例：</Control>
+		
+			<Control ID="lblHeader">全局设置覆盖</Control>
+			<Control ID="chkOverrideVideoFilter">覆盖视频滤镜：</Control>
+			<Control ID="chkOverrideShader">覆盖着色器：</Control>
+			<Control ID="chkOverrideAspectRatio">覆盖宽高比：</Control>
 		</Form>
 		<Form ID="ShaderSelector">
 			<Control ID="btnLoadShader">加载着色器…</Control>
@@ -255,6 +260,19 @@ Windows：
 			<Control ID="chkDisableFrameSkipping">快进时禁用跳帧</Control>
 			<Control ID="chkForceFixedResolution">使用固定输出分辨率（2 倍缩放，约 512×478）</Control>
 			<Control ID="chkRemoveSpriteLimit">移除精灵数量限制</Control>
+		
+			<Control ID="lblChannel1">声道 1</Control>
+			<Control ID="lblChannel2">声道 2</Control>
+			<Control ID="lblChannel3">声道 3</Control>
+			<Control ID="lblChannel4">声道 4</Control>
+			<Control ID="lblChannel5">声道 5</Control>
+			<Control ID="lblChannel6">声道 6</Control>
+			<Control ID="lblChannel7">声道 7</Control>
+			<Control ID="lblChannel8">声道 8</Control>
+			<Control ID="lblRamPowerOnState">RAM 默认上电状态：</Control>
+			<Control ID="chkRandomPowerOnState">随机化上电状态</Control>
+			<Control ID="chkStrictBoardMappings">使用严格的电路板映射（可能导致部分 ROM 修改版无法运行）</Control>
+			<Control ID="lblSpcClockSpeedAdjustment">SPC 时钟速度调整：</Control>
 		</Form>
 		<Form ID="NesConfigView">
 			<Control ID="tpgGeneral">常规</Control>
@@ -304,6 +322,30 @@ Windows：
 			<Control ID="lblAngle">角度（度）</Control>
 			<Control ID="lblOverclockHint">超频可以帮助减少或消除游戏运行缓慢的问题（但也可能导致异常）。如需超频，可尝试将“before NMI”数值设为几百条扫描线（例如 300 以上）。如果游戏因此无法正常运行，请降低该数值，或改用“after NMI”字段。</Control>
 			<Control ID="grpPpuTiming">PPU 垂直消隐配置</Control>
+		
+			<Control ID="lblExtraScanlinesBeforeNmi">NMI 前额外扫描线：</Control>
+			<Control ID="lblExtraScanlinesAfterNmi">NMI 后额外扫描线：</Control>
+			<Control ID="lblDeveloperSettings">面向开发者的推荐设置（自制软件 / ROM 修改）</Control>
+			<Control ID="lblRamPowerOnState">RAM 默认上电状态：</Control>
+			<Control ID="chkMapperRandomPowerOnState">随机化映射器上电状态</Control>
+			<Control ID="chkRandomizeCpuPpuAlignment">随机化开机/重置时 CPU 与 PPU 的时序对齐</Control>
+			<Control ID="chkEnableOamDecay">启用 PPU OAM 衰减</Control>
+			<Control ID="chkEnablePpuOamRowCorruption">启用 PPU $2003/渲染切换导致的 OAM 行损坏</Control>
+			<Control ID="chkEnablePpu2006ScrollGlitch">启用 PPU $2006 滚动异常模拟</Control>
+			<Control ID="chkEnablePpu2000ScrollGlitch">启用 PPU $2000/$2005/$2006 首次写入滚动异常模拟</Control>
+			<Control ID="chkRestrictPpuAccessOnFirstFrame">重置/开机后的第一帧内持续清除 PPU $2000/1/5/6/7</Control>
+			<Control ID="lblMiscSettings">其他设置</Control>
+			<Control ID="chkDisableOamAddrBug">禁用 PPU 帧开始时的 OAM 损坏（2C02D 及更早版本）</Control>
+			<Control ID="chkDisablePaletteRead">禁用 PPU 调色板读取</Control>
+			<Control ID="chkDisablePpu2004Reads">禁用 PPU $2004 读取</Control>
+			<Control ID="chkEnablePpuSpriteEvalBug">启用 X=255 处错误精灵像素（2C02B 及更早版本）</Control>
+			<Control ID="chkDisablePpuReset">重置主机时不重置 PPU（Famicom 行为）</Control>
+			<Control ID="chkDisableGameGenieBusConflicts">禁用 Game Genie 总线冲突模拟</Control>
+			<Control ID="chkDisableFlashSaves">禁用闪存存档（UNROM512 / GTROM / Rainbow）</Control>
+			<Control ID="chkOverwriteOriginalRom">修改时直接更新原始 ROM 文件（FDS / Flash）</Control>
+			<Control ID="chkEnableDmcSampleDuplicationGlitch">启用 DMC 样本重复异常（后期 G 和 H 型 CPU 行为）</Control>
+			<Control ID="chkEnableCpuTestMode">启用 CPU 测试模式寄存器</Control>
+			<Control ID="lblConsoleType">主机型号：</Control>
 		</Form>
 		<Form ID="GameboyConfigView">
 			<Control ID="tpgGeneral">常规</Control>
@@ -430,6 +472,9 @@ Windows：
 		</Form>
 		<Form ID="ColorPickerWindow">
 			<Control ID="wndTitle">颜色选择器</Control>
+		
+			<Control ID="btnOk">确定</Control>
+			<Control ID="btnCancel">取消</Control>
 		</Form>
 		<Form ID="PaletteConfig">
 			<Control ID="btnSelectPalette">加载预设调色板…</Control>
@@ -444,6 +489,12 @@ Windows：
 			<Control ID="lblPort1C">接口 3：</Control>
 			<Control ID="lblPort1D">接口 4：</Control>
 			<Control ID="grpGeneral">常规</Control>
+		
+			<Control ID="lblTurboTapConfig">Turbo Tap 连发转接器配置</Control>
+			<Control ID="lblController">控制器：</Control>
+			<Control ID="lblPort1E">端口 5：</Control>
+			<Control ID="chkAllowInvalidInput">允许无效输入（例如同时按下上和下，或左和右）</Control>
+			<Control ID="chkPreventSelectRunReset">禁用 Run+Select 组合键（避免游戏中意外重置）</Control>
 		</Form>
 		<Form ID="SmsConfigView">
 			<Control ID="tpgGeneral">常规</Control>
@@ -488,6 +539,8 @@ Windows：
 			<Control ID="lblController2">接口 2：</Control>
 			<Control ID="grpGeneral">常规</Control>
 			
+		
+			<Control ID="chkAllowInvalidInput">允许无效输入（例如同时按下上和下，或左和右）</Control>
 		</Form>
 		<Form ID="CvConfigView">
 			<Control ID="tpgGeneral">常规</Control>
@@ -676,18 +729,34 @@ Windows：
 			<Control ID="lblInvalidCodes">部分代码与所选格式不匹配。</Control>
 			<Control ID="btnOK">确定</Control>
 			<Control ID="btnCancel">取消</Control>
+		
+			<Control ID="lblDescription">描述：</Control>
 		</Form>
 		<Form ID="CommandLineHelpWindow">
 			<Control ID="btnOk">关闭</Control>
+		
+			<Control ID="wndTitle">命令行选项</Control>
 		</Form>
 		<Form ID="ShaderConfigWindow">
 			<Control ID="btnReset">恢复默认值</Control>
+		
+			<Control ID="wndTitle">着色器设置</Control>
+			<Control ID="btnOk">确定</Control>
+			<Control ID="btnCancel">取消</Control>
 		</Form>
 		<Form ID="SelectRomWindow">
 			<Control ID="lblSearch">搜索：</Control>
+		
+			<Control ID="wndTitle">选择 ROM...</Control>
+			<Control ID="btnOK">确定</Control>
+			<Control ID="btnCancel">取消</Control>
 		</Form>
 		<Form ID="CheatDatabaseWindow">
 			<Control ID="lblSearch">搜索：</Control>
+		
+			<Control ID="wndTitle">从作弊码数据库导入作弊码...</Control>
+			<Control ID="btnOK">确定</Control>
+			<Control ID="btnCancel">取消</Control>
 		</Form>
 		<Form ID="ControllerConfigWindow">
 			<Control ID="lblTurboFast">快</Control>
@@ -781,9 +850,13 @@ Windows：
 			<Control ID="mnuView">视图(_V)</Control>
 			<Control ID="chkShowPaletteIndexes">显示调色板索引</Control>
 			<Control ID="lblSelectedColor">选中的颜色</Control>
+		
+			<Control ID="btnToggleSettings">切换设置面板</Control>
 		</Form>
 		<Form ID="ColorIndexPickerWindow">
 			<Control ID="wndTitle">选择颜色…</Control>
+		
+			<Control ID="btnCancel">取消</Control>
 		</Form>
 		<Form ID="SpriteViewerWindow">
 			<Control ID="wndTitle">精灵图查看器</Control>
@@ -818,6 +891,13 @@ Windows：
 			<Control ID="lblStartAddress">起始地址：$</Control>
 			<Control ID="lblBytesUsed">已用字节数：</Control>
 			<Control ID="btnOk">应用</Control>
+		
+			<Control ID="lblByteCountExceeded">警告：新代码长度超过原始代码。&amp;#13;应用此修改将覆盖代码的其他部分，并可能导致问题。</Control>
+			<Control ID="lblMaxSizeExceeded">错误：代码过大，无法容纳。</Control>
+			<Control ID="lblCodeMatchesOriginal">代码与原始代码一致</Control>
+			<Control ID="colLine">行</Control>
+			<Control ID="colError">错误</Control>
+			<Control ID="btnCancel">取消</Control>
 		</Form>
 		<Form ID="ScriptWindow">
 			<Control ID="wndTitle">脚本窗口</Control>
@@ -839,11 +919,17 @@ Windows：
 			<Control ID="wndTitle">历史记录查看器</Control>
 			<Control ID="lblVolume">音量</Control>
 			<Control ID="mnuOptions">设置</Control>
+		
+			<Control ID="mnuFile">文件</Control>
 		</Form>
 		<Form ID="HistoryViewerRangePickerWindow">
 			<Control ID="wndTitle">导出指定范围…</Control>
 			<Control ID="lblStartTime">开始时间：</Control>
 			<Control ID="lblEndTime">结束时间：</Control>
+		
+			<Control ID="lblSeconds">秒</Control>
+			<Control ID="btnOk">确定</Control>
+			<Control ID="btnCancel">取消</Control>
 		</Form>
 		<Form ID="NesHeaderEditWindow">
 			<Control ID="wndTitle">NES 头信息编辑器</Control>
@@ -884,6 +970,17 @@ Windows：
 			<Control ID="mnuDebug">调试(_D)</Control>
 			<Control ID="mnuView">视图(_V)</Control>
 			<Control ID="mnuSearch">搜索(_S)</Control>
+		
+			<Control ID="lblCondition">条件：</Control>
+			<Control ID="grpLogOptions">{0} - 日志设置</Control>
+			<Control ID="lblFlagFormat">标志格式：</Control>
+			<Control ID="chkEffectiveAddress">显示有效地址</Control>
+			<Control ID="chkIndentCode">根据堆栈指针缩进</Control>
+			<Control ID="lblConditionError">条件包含无效的语法或符号。</Control>
+			<Control ID="btnOpenTraceFile">打开跟踪文件</Control>
+			<Control ID="btnStart">记录到文件...</Control>
+			<Control ID="btnStop">停止记录</Control>
+			<Control ID="btnClear">清除日志</Control>
 		</Form>
 		<Form ID="EventViewerWindow">
 			<Control ID="wndTitle">事件查看器</Control>
@@ -895,25 +992,46 @@ Windows：
 			<Control ID="colAddress">地址</Control>
 			<Control ID="colValue">数值</Control>
 			<Control ID="colDetails">详情</Control>
+		
+			<Control ID="btnToggleSettings">切换设置面板</Control>
+			<Control ID="btnSelectAll">全选</Control>
+			<Control ID="btnDeselectAll">取消全选</Control>
+			<Control ID="colPc">PC</Control>
+			<Control ID="colScanline">扫描线</Control>
+			<Control ID="colCycle">周期</Control>
 		</Form>
 		<Form ID="DebuggerWindow">
 			<Control ID="mnuFile">文件(_F)</Control>
 			<Control ID="mnuDebug">调试(_D)</Control>
 			<Control ID="mnuSearch">搜索(_S)</Control>
 			<Control ID="mnuOptions">设置(_S)</Control>
+		
+			<Control ID="btnToggleSettingsPanel">切换设置面板</Control>
 		</Form>
 		<Form ID="BreakpointListView">
 			<Control ID="colType">类型</Control>
 			<Control ID="colAddress">地址</Control>
+		
+			<Control ID="colEnabled">启用</Control>
+			<Control ID="colMarked">标记</Control>
+			<Control ID="colCondition">条件</Control>
 		</Form>
 		<Form ID="CallStackView">
 			<Control ID="colFunction">函数</Control>
+		
+			<Control ID="colPcAddress">PC 地址</Control>
+			<Control ID="colRomAddress">ROM 地址</Control>
 		</Form>
 		<Form ID="FindResultListView">
 			<Control ID="colAddress">地址</Control>
+		
+			<Control ID="colResult">结果</Control>
 		</Form>
 		<Form ID="FunctionListView">
 			<Control ID="colFunction">函数</Control>
+		
+			<Control ID="colCpuAddr">CPU 地址</Control>
+			<Control ID="colRomAddr">ROM 地址</Control>
 		</Form>
 		<Form ID="WatchListView">
 			<Control ID="colName">名称</Control>
@@ -985,6 +1103,8 @@ Windows：
 			<Control ID="mnuView">视图(_V)</Control>
 			<Control ID="mnuSearch">搜索(_S)</Control>
 			<Control ID="lblMemoryType">内存类型：</Control>
+		
+			<Control ID="btnToggleSettings">切换设置面板</Control>
 		</Form>
 		<Form ID="MemoryToolsDisplayOptionsView">
 			<Control ID="chkHighlightRead">读取次数</Control>
@@ -1021,14 +1141,33 @@ Windows：
 			<Control ID="lblFrames">帧</Control>
 			<Control ID="lblNoMatchFound">未找到匹配项！</Control>
 			<Control ID="btnClose">关闭</Control>
+		
+			<Control ID="chkUseTblMappings">使用 TBL 映射</Control>
+			<Control ID="lblDataTypeFilters">数据类型筛选</Control>
+			<Control ID="chkFilterUnidentified">未识别</Control>
+			<Control ID="lblAccessFilters">访问筛选</Control>
+			<Control ID="chkFilterNotAccessed">未访问</Control>
+			<Control ID="chkFilterWrite">已写入</Control>
+			<Control ID="chkFilterTimeSpan">在最近</Control>
+			<Control ID="btnFindPrev">上一个</Control>
+			<Control ID="btnFindNext">下一个</Control>
+			<Control ID="lblSearchHelp">搜索十六进制数值时，可以使用问号（?）表示任意数值的字节。
+
+例如：“FF ? 55”将搜索所有由 FF 开头、55 结尾的连续三个字节。</Control>
 		</Form>
 		<Form ID="FontOptionsView">
 			<Control ID="lblFamily">字体：</Control>
 			<Control ID="lblSize">大小：</Control>
+		
+			<Control ID="lblWarningMono">此字体似乎不是等宽字体。使用此字体可能导致界面显示异常。</Control>
+			<Control ID="lblError">不支持此字体，无法使用。</Control>
 		</Form>
 		<Form ID="RefreshTimingView">
 			<Control ID="lblResetToDefault">恢复默认值</Control>
 			<Control ID="chkRefreshOnBreakPause">中断时刷新</Control>
+		
+			<Control ID="lblScanline">在扫描线（V）刷新</Control>
+			<Control ID="lblCycle">和周期（H）</Control>
 		</Form>
 		<Form ID="GoToAllWindow">
 			<Control ID="wndTitle">转到全部</Control>
@@ -1141,10 +1280,20 @@ Windows：
 			<Control ID="colValue">数值</Control>
 			<Control ID="colReadCount">读取次数</Control>
 			<Control ID="colWriteCount">写入次数</Control>
+		
+			<Control ID="colPrevValue">上一次的值</Control>
+			<Control ID="colExecCount">执行次数</Control>
+			<Control ID="colLastRead">上次读取</Control>
+			<Control ID="colLastWrite">上次写入</Control>
+			<Control ID="colLastExec">上次执行</Control>
+			<Control ID="colMatch">匹配</Control>
 		</Form>
 		<Form ID="GoToWindow">
 			<Control ID="wndTitle">转到地址…</Control>
 			<Control ID="lblAddress">地址：</Control>
+		
+			<Control ID="btnOk">确定</Control>
+			<Control ID="btnCancel">取消</Control>
 		</Form>
 		<Form ID="FindAllOccurrencesWindow">
 			<Control ID="wndTitle">查找所有匹配项…</Control>
@@ -1152,6 +1301,8 @@ Windows：
 			<Control ID="chkMatchCase">区分大小写</Control>
 			<Control ID="chkMatchWholeWord">全字匹配</Control>
 			<Control ID="btnFind">查找</Control>
+		
+			<Control ID="btnCancel">取消</Control>
 		</Form>
 		<Form ID="BreakInWindow">
 			<Control ID="wndTitle">中断…</Control>
@@ -1160,10 +1311,17 @@ Windows：
 			<Control ID="lblPpuCycles">PPU 周期</Control>
 			<Control ID="lblPpuScanlines">扫描线</Control>
 			<Control ID="lblPpuFrames">帧</Control>
+		
+			<Control ID="lblBreakIn">中断位置：</Control>
+			<Control ID="btnOk">确定</Control>
+			<Control ID="btnCancel">取消</Control>
 		</Form>
 		<Form ID="BreakOnWindow">
 			<Control ID="wndTitle">运行至扫描线…</Control>
 			<Control ID="lblBreakOn">扫描线编号：</Control>
+		
+			<Control ID="btnOk">确定</Control>
+			<Control ID="btnCancel">取消</Control>
 		</Form>
 		<Form ID="LabelEditWindow">
 			<Control ID="wndTitle">编辑标签…</Control>
@@ -1174,9 +1332,15 @@ Windows：
 			<Control ID="lblLength">长度：</Control>
 			<Control ID="lblBytes">字节</Control>
 			<Control ID="btnDelete">删除标签</Control>
+		
+			<Control ID="btnOk">确定</Control>
+			<Control ID="btnCancel">取消</Control>
 		</Form>
 		<Form ID="CommentEditWindow">
 			<Control ID="wndTitle">编辑注释…</Control>
+		
+			<Control ID="btnOk">确定</Control>
+			<Control ID="btnCancel">取消</Control>
 		</Form>
 		<Form ID="RegisterViewerWindow">
 			<Control ID="wndTitle">寄存器查看器</Control>
@@ -1187,6 +1351,8 @@ Windows：
 			<Control ID="colAddress">地址</Control>
 			<Control ID="colName">名称</Control>
 			<Control ID="colValue">数值</Control>
+		
+			<Control ID="colValueHex">数值（十六进制）</Control>
 		</Form>
 		<Form ID="BreakpointEditWindow">
 			<Control ID="wndTitle">编辑断点…</Control>
@@ -1205,6 +1371,9 @@ Windows：
 			<Control ID="chkMark">在事件查看器中标记</Control>
 			<Control ID="chkEnable">启用执行中断</Control>
 			<Control ID="lblConditionError">条件包含无效的语法或符号。</Control>
+		
+			<Control ID="btnOK">确定</Control>
+			<Control ID="btnCancel">取消</Control>
 		</Form>
 		<Form ID="FirmwareSelect">
 			<Control ID="btnSelect">选择…</Control>
@@ -1268,6 +1437,8 @@ Windows：
 			<Control ID="btnBrowse">浏览...</Control>
 			<Control ID="btnOK">开始录制</Control>
 			<Control ID="btnCancel">取消</Control>
+		
+			<Control ID="lblDescription">描述：</Control>
 		</Form>
 			<Form ID="HdPackBuilderWindow">
 			<Control ID="wndTitle">高清素材包构建器</Control>
@@ -1320,8 +1491,15 @@ Windows：
 			<Control ID="colComment">注释</Control>
 		</Form>
 			<Form ID="OtherConsolesConfigView">
+		
+			<Control ID="tabColecoVision">ColecoVision</Control>
 		</Form>
 			<Form ID="ShortcutKeysTabView">
+		
+			<Control ID="lblShortcutWarning">警告：当前配置存在按键冲突。如果这不是有意设置，请检查并修正按键绑定。</Control>
+			<Control ID="colAction">操作</Control>
+			<Control ID="colBinding1">绑定 #1</Control>
+			<Control ID="colBinding2">绑定 #2</Control>
 		</Form>
 			<Form ID="DebuggerShortcutKeyGrid">
 			<Control ID="colAction">快捷操作</Control>
