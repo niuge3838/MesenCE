@@ -1334,6 +1334,52 @@ Windows：
 			<Control ID="colAction">快捷操作</Control>
 			<Control ID="colBinding1">按键</Control>
 		</Form>
+	
+		<Form ID="SetupWizardWindow">
+			<Control ID="wndTitle">MesenCE</Control>
+			<Control ID="lblMesen">MesenCE - 模拟器</Control>
+			<Control ID="lblConfigWizard">配置向导</Control>
+			<Control ID="lblInitialSetup">请花一点时间完成 Mesen 的初始设置。</Control>
+			<Control ID="lblStorageLocation">数据存储位置</Control>
+			<Control ID="lblStorageHint">选择存储 Mesen 数据的位置：</Control>
+			<Control ID="radStorageDocuments">将数据存储在我的用户配置文件中</Control>
+			<Control ID="radStoragePortable">将数据存储在应用程序所在文件夹中</Control>
+			<Control ID="lblDataLocation">文件夹：</Control>
+			<Control ID="lblInputMappings">输入映射</Control>
+			<Control ID="lblInputHint">选择你偏好的输入方式：</Control>
+			<Control ID="lblMiscOptions">其他选项</Control>
+			<Control ID="chkCreateShortcut">在桌面上创建快捷方式</Control>
+			<Control ID="chkCheckForUpdates">启动时自动检查更新</Control>
+			<Control ID="btnOk">确认</Control>
+			<Control ID="lblCancel">取消</Control>
+		</Form>
+	
+		<Form ID="AboutWindow">
+			<Control ID="wndTitle">关于 - MesenCE</Control>
+			<Control ID="lblName">Mesen 社区版</Control>
+			<Control ID="lblWebsite">网站：</Control>
+			<Control ID="lblLink">github.com/nesdev-org/MesenCE</Control>
+			<Control ID="lblVersion">版本：</Control>
+			<Control ID="lblBuildDate">构建日期：</Control>
+			<Control ID="lblCommitId">提交 ID：</Control>
+			<Control ID="lblRuntimeVersion">运行时：</Control>
+			<Control ID="grpAcknowledgements">致谢</Control>
+			<Control ID="lblAcknowledgeList">感谢以下个人和项目对 Mesen 的开发提供直接或间接的帮助：</Control>
+			<Control ID="lblUsedSoftware">Mesen 使用了以下开源软件：</Control>
+			<Control ID="lblSpecialThanks">也感谢所有以任何方式作出贡献的人！（错误报告、测试、研究等）</Control>
+			<Control ID="btnOk">确定</Control>
+		</Form>
+	
+		<Form ID="SystemSpecificSettings">
+			<Control ID="lblSystemSpecificSettings">系统专属设置</Control>
+			<Control ID="lblNes">NES</Control>
+			<Control ID="lblSnes">SNES</Control>
+			<Control ID="lblGameboy">Game Boy</Control>
+			<Control ID="lblGba">GBA</Control>
+			<Control ID="lblPcEngine">PC Engine</Control>
+			<Control ID="lblSms">SMS</Control>
+			<Control ID="lblWs">WonderSwan</Control>
+		</Form>
 	</Forms>
 	<Messages>
 		<Message ID="LastSession">上次会话</Message>
