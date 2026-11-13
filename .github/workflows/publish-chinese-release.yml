@@ -1,0 +1,76 @@
+name: Publish Chinese Windows Release
+
+on:
+  workflow_run:
+    workflows: ["Build Mesen"]
+    types: [completed]
+    branches: [master]
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  release:
+    if: github.event.workflow_run.event == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Windows builds
+        id: check
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          result=$(gh api "repos/$REPOSITORY/actions/runs/$RUN_ID/jobs?per_page=100" --jq '[.jobs[] | select(.name | startswith("windows ("))] | if length == 2 then all(.[]; .conclusion == "success") else false end')
+          echo "windows_ok=$result" >> "$GITHUB_OUTPUT"
+          if [ "$result" != "true" ]; then
+            echo "Windows builds did not both succeed; release will not be published."
+          fi
+
+      - name: Download Windows builds
+        if: steps.check.outputs.windows_ok == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          mkdir -p release/standard release/aot
+          gh run download "$RUN_ID" --repo "$REPOSITORY" --name "Mesen (Windows - net10.0)" --dir release/standard
+          gh run download "$RUN_ID" --repo "$REPOSITORY" --name "Mesen (Windows - net10.0 - AoT)" --dir release/aot
+          test -f release/standard/Mesen.exe
+          test -f release/standard/Mesen-简体中文.bat
+          test -f release/standard/Localization/resources.zh-CN.xml
+          test -f release/aot/Mesen.exe
+          test -f release/aot/Mesen-简体中文.bat
+          test -f release/aot/Localization/resources.zh-CN.xml
+          (cd release/standard && zip -qr ../../MesenCE-简体中文-Windows-x64.zip .)
+          (cd release/aot && zip -qr ../../MesenCE-简体中文-Windows-x64-AoT.zip .)
+
+      - name: Create or update stable release
+        if: steps.check.outputs.windows_ok == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          TARGET_SHA: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          title="MesenCE 简体中文版（持续更新）"
+          notes="$(cat <<'EOF'
+          ## Windows 简体中文版
+
+          下载下方的 ZIP 压缩包，解压后运行 **Mesen-简体中文.bat** 即可启动简体中文界面。
+
+          - **普通版**：适合大多数用户，推荐下载。
+          - **AoT 版**：基于 Ahead-of-Time 编译的版本。
+
+          中文语言文件位于 `Localization/resources.zh-CN.xml`。请保持该文件夹与程序文件放在一起。
+
+          此 Release 使用固定标签 `zh-cn-latest`，后续 Windows 构建成功后会自动更新附件；此页面链接保持不变。
+          EOF
+          )"
+          if gh release view zh-cn-latest --repo "$REPOSITORY" >/dev/null 2>&1; then
+            gh release upload zh-cn-latest MesenCE-简体中文-Windows-x64.zip MesenCE-简体中文-Windows-x64-AoT.zip --repo "$REPOSITORY" --clobber
+            gh release edit zh-cn-latest --repo "$REPOSITORY" --title "$title" --notes "$notes" --latest
+          else
+            gh release create zh-cn-latest MesenCE-简体中文-Windows-x64.zip MesenCE-简体中文-Windows-x64-AoT.zip --repo "$REPOSITORY" --target "$TARGET_SHA" --title "$title" --notes "$notes" --latest
+          fi
